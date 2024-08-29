@@ -1,0 +1,71 @@
+/* Root Variables */
+:root {
+    --default-font: 'Montserrat', sans-serif;
+    --heading-font: 'Lilita One', sans-serif;
+    --nav-font: 'Lilita One', sans-serif;
+    --background-color: #ffffff;
+    --default-color: #000000;
+    --heading-color: #000000;
+    --accent-color: #5D1C78;
+    --surface-color: #ffffff;
+    --contrast-color: #ffffff;
+    --nav-color: #212529;
+    --nav-hover-color: #5D1C78;
+    --nav-mobile-background-color: #ffffff;
+    --nav-dropdown-background-color: #ffffff;
+    --nav-dropdown-color: #212529;
+    --nav-dropdown-hover-color: #5D1C78;
+    scroll-behavior: smooth;
+  }
+  
+  /* General Styles */
+  body {
+    margin: 0;
+    font-family: var(--default-font);
+    background-color: var(--background-color);
+    color: var(--default-color);
+  }
+  
+  h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  header {
+    padding: 20px 0;
+    background-color: var(--surface-color);
+    text-align: center;
+  }
+  
+  .header .logo {
+    line-height: 1;
+  }
+  
+  .header .logo img {
+    max-height: 65px; /* Adjusted logo size to match design */
+    margin-right: 8px;
+  }
+  
+  .header .logo h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+  
+  main {
+    padding: 20px 0;
+  }
+  
+  footer {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
