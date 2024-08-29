@@ -20,10 +20,8 @@ h1, h2 {
     width: 160px;
     height: auto;
     display: inline-block;
-    margin: 5px; /* Optional: adds some space between the buttons */
-  }
-
-
+    margin: 5px;
+}
 
 /* Hero Section */
 #hero {
@@ -31,11 +29,6 @@ h1, h2 {
     color: white;
     text-align: center;
     padding: 50px 0;
-}
-
-#hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
 }
 
 #hero p {
@@ -49,30 +42,10 @@ h1, h2 {
     gap: 20px;
 }
 
-#hero .playstore-btn, #hero .appstore-btn {
-    background-color: #e63946;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-#hero .playstore-btn:hover, #hero .appstore-btn:hover {
-    background-color: #d62828;
-}
-
-/* Features Section Styling */
+/* Features Section */
 #features {
     padding: 20px 0;
-    background-color: #f9f9f9; /* Light background color */
-}
-
-#features .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background-color: #f9f9f9;
 }
 
 #features h2 {
@@ -89,37 +62,35 @@ h1, h2 {
 }
 
 .feature-item {
-    font-family: 'Lilita One', sans-serif;
     text-align: center;
-    flex: 1 1 200px; /* Adjusts the item width */
-    max-width: 200px; /* Limits the width */
+    flex: 1 1 200px;
+    max-width: 200px;
 }
 
 .feature-number {
-    font-size: 3rem; /* Adjust font size for emphasis */
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .feature-description {
-    font-size: 1.2rem; /* Medium font size for description */
+    font-size: 1.2rem;
 }
 
-
+/* Game Header */
 .game-header {
-    text-align: center; /* Center the logo horizontally */
-    margin-top: 20px; /* Adjust the top margin as needed */
+    text-align: center;
+    margin-top: 20px;
 }
 
 .game-logo {
-    width: 400px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 400px;
+    height: auto;
 }
-
 
 /* Screenshots Section */
 #screenshots {
-    background-color: #ffffff; /* Set the background color to white */
+    background-color: #ffffff;
     padding: 50px 0;
 }
 
@@ -138,6 +109,23 @@ h1, h2 {
     border-radius: 15px;
 }
 
+/* Play Guide Section */
+#play-guide {
+    margin-bottom: 50px;
+}
+
+.play-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.guide-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* Footer */
 footer {
     background-color: #d58024;
@@ -153,20 +141,3 @@ footer .social-icons a {
     margin: 0 10px;
     text-decoration: none;
 }
-
-#play-guide .play-guide-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px; /* Adjust spacing between images */
-}
-
-.guide-image {
-    width: 100%; /* Makes the image fill its container */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures images cover the space without distortion */
-}
-
-#play-guide {
-    margin-bottom: 50px; /* Adjust the value as needed */
-}
-
