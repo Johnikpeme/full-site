@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    font-family: 'Lilita One', sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.store-badge {
+    width: 160px;
+    height: auto;
+    display: inline-block;
+    margin: 5px; /* Optional: adds some space between the buttons */
+  }
+
+
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, #cb5b05, #457b9d);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+#hero .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#hero .playstore-btn, #hero .appstore-btn {
+    background-color: #e63946;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#hero .playstore-btn:hover, #hero .appstore-btn:hover {
+    background-color: #d62828;
+}
+
+/* Features Section Styling */
+#features {
+    padding: 20px 0;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+#features .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#features h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-item {
+    font-family: 'Lilita One', sans-serif;
+    text-align: center;
+    flex: 1 1 200px; /* Adjusts the item width */
+    max-width: 200px; /* Limits the width */
+}
+
+.feature-number {
+    font-size: 3rem; /* Adjust font size for emphasis */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: 1.2rem; /* Medium font size for description */
+}
+
+
+.game-header {
+    text-align: center; /* Center the logo horizontally */
+    margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.game-logo {
+    width: 400px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Screenshots Section */
+#screenshots {
+    background-color: #ffffff; /* Set the background color to white */
+    padding: 50px 0;
+}
+
+#screenshots h2 {
+    margin-bottom: 30px;
+}
+
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.screenshots-grid img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #d58024;
+    color: white;
+    font-family: 'Lilita One', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#play-guide .play-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px; /* Adjust spacing between images */
+}
+
+.guide-image {
+    width: 100%; /* Makes the image fill its container */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures images cover the space without distortion */
+}
+
+#play-guide {
+    margin-bottom: 50px; /* Adjust the value as needed */
+}
+
