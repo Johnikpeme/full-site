@@ -250,13 +250,9 @@ const slideshowContainer = createElement('div', {
 const slideImages = [
     'assets/news-2.jpg',
     'assets/slide2.jpg',
-    'assets/slide8.jpg',
     'assets/news-main-1.jpeg',
     'assets/slide5.jpg',
-    'assets/slide6.jpg',
-    'assets/slide7.jpg',
     'assets/slide3.jpg',
-    'assets/slide9.jpg'
 ];
 
 // Create slides
@@ -532,7 +528,7 @@ const commitmentsContainer = createElement('div', {
 
 const commitmentItems = [
     { name: 'Africa First', img: 'africa-first2.jpg', bio: 'We prioritize games and developers that reflect African culture and stories, bringing them to a global audience.' },
-    { name: 'Player Focused', img: 'slide8.jpg', bio: 'Putting players first, crafting immersive experiences that prioritise fun, fairness, education and engagement.' },
+    { name: 'Player Focused', img: 'slide3.jpg', bio: 'Putting players first, crafting immersive experiences that prioritise fun, fairness, education and engagement.' },
     { name: 'Community Driven', img: 'africa-first.jpg', bio: 'Building a community-driven gaming ecosystem where players connect, create, and thrive together.' },
     { name: 'Social Impact', img: 'social.jpg', bio: 'Educating and informing young Africans and global gamers about African history, stories and cultural heritage through our games.' },
     { name: 'Sustainability', img: 'sustain.jpg', bio: 'Committed to eco-friendly practices in game development and community impact.' }

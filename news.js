@@ -180,16 +180,11 @@ const headerLeft = createElement('div', {
 const logo = createElement('div', { cursor: 'pointer' });
 const logoLink = createElement('a', {}, { href: 'index.html' });
 const logoIcon = createElement('img', {
-    height: '40px',
+    height: '5vh',
     width: 'auto',
     display: 'block',
     transition: 'transform 0.5s ease'
 }, { src: 'assets/logo.png', alt: 'Logo' });
-
-logoLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: '0', behavior: 'smooth' });
-});
 
 logoLink.appendChild(logoIcon);
 logo.appendChild(logoLink);
