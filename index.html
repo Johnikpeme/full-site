@@ -11,9 +11,12 @@
     <div id="app"></div>
     <script src="app.js"></script>
     <script>
-        // Remove '.html' from the URL on page load
-        if (window.location.pathname.endsWith('.html')) {
-            window.history.replaceState(null, null, window.location.pathname.replace('.html', ''));
+        // Remove '.html' from the URL on page load, special case for index.html
+        const currentPath = window.location.pathname;
+        if (currentPath === '/index.html') {
+            window.history.replaceState(null, null, '/');
+        } else if (currentPath.endsWith('.html')) {
+            window.history.replaceState(null, null, currentPath.replace('.html', ''));
         }
     </script>
 </body>
