@@ -464,6 +464,7 @@ const seeMoreButton = createElement('button', {
     transition: 'transform 0.3s ease, background-color 0.3s ease'
 }, {}, ['See More']);
 
+// Hover effects
 seeMoreButton.addEventListener('mouseenter', () => {
     seeMoreButton.style.transform = 'scale(1.1)';
     seeMoreButton.style.backgroundColor = '#444444';
@@ -471,6 +472,11 @@ seeMoreButton.addEventListener('mouseenter', () => {
 seeMoreButton.addEventListener('mouseleave', () => {
     seeMoreButton.style.transform = 'scale(1)';
     seeMoreButton.style.backgroundColor = '#333333';
+});
+
+// Click event to redirect to news.html
+seeMoreButton.addEventListener('click', () => {
+    window.location.href = 'news.html';
 });
 
 newsHeader.append(newsTitle, seeMoreButton);
