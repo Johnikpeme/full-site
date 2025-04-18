@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <!-- Lottie Player CDN -->
-    <script src="https://unpkg.com/@dotlottie/player@2.0.0/dist/dotlottie-player.js"></script>
 </head>
 <body>
     <div id="app"></div>
     <script src="404.js"></script>
     <script>
-        // Remove '.html' from the URL, handle error-404.html
+        // Remove '.html' from the URL
         const currentPath = window.location.pathname;
         if (currentPath.endsWith('.html')) {
             window.history.replaceState(null, null, currentPath.replace('.html', ''));
