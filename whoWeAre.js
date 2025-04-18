@@ -649,21 +649,28 @@ fadeInOnScroll(commitments);
 mainContent.append(heroSection, ourStory, leadership, commitments);
 
 // Footer (Black Background)
+const isMobile = window.innerWidth <= 768;
+
 const footer = createElement('footer', {
-    className: 'footer', // Add class for styling
+    className: 'footer',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: isMobile ? 'center' : 'space-between',
     alignItems: 'center',
-    padding: '20px 50px',
+    flexDirection: isMobile ? 'column' : 'row',
+    padding: '2vh 5vw',
     backgroundColor: '#000000',
     borderTop: '1px solid #333'
 });
 
-const footerLeft = createElement('div', { className: 'footer-left' });
+const footerLeft = createElement('div', { 
+    className: 'footer-left',
+    textAlign: isMobile ? 'center' : 'left',
+    marginBottom: isMobile ? '2vh' : '0'
+});
 const footerLogo = createElement('div', { cursor: 'pointer' });
 const footerLogoLink = createElement('a', {}, { href: 'index.html' });
 const footerLogoIcon = createElement('img', {
-    height: '40px',
+    height: '5vh',
     width: 'auto',
     display: 'block',
     transition: 'transform 0.5s ease'
@@ -677,12 +684,18 @@ footerLogoLink.appendChild(footerLogoIcon);
 footerLogo.appendChild(footerLogoLink);
 footerLeft.appendChild(footerLogo);
 
-const footerCenter = createElement('div', { className: 'footer-center' });
+const footerCenter = createElement('div', { 
+    className: 'footer-center',
+    textAlign: isMobile ? 'center' : 'center',
+    marginBottom: isMobile ? '2vh' : '0'
+});
 const footerNav = createElement('ul', { 
-    className: 'footer-nav', // Add class for styling
+    className: 'footer-nav',
     display: 'flex', 
+    flexDirection: isMobile ? 'column' : 'row',
     listStyle: 'none', 
-    gap: '20px' 
+    gap: isMobile ? '1vh' : '2vw',
+    padding: '0'
 });
 
 const footerLinks = [
@@ -693,7 +706,7 @@ const footerLinks = [
     const a = createElement('a', {
         color: '#FFFFFF',
         textDecoration: 'none',
-        fontSize: '14px',
+        fontSize: '2.2vh',
         textTransform: 'uppercase',
         transition: 'color 0.3s ease, transform 0.3s ease'
     }, { href: link.href }, [link.text]);
@@ -715,15 +728,19 @@ footerCenter.appendChild(footerNav);
 
 const footerRight = createElement('div', { 
     className: 'footer-right', 
-    textAlign: 'right' 
+    textAlign: isMobile ? 'center' : 'right',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: isMobile ? 'center' : 'flex-end'
 });
 
 const socialLinks = createElement('div', {
-    className: 'social-links', // Add class for styling
+    className: 'social-links',
     display: 'flex',
+    flexDirection: isMobile ? 'column' : 'row',
     justifyContent: 'center',
-    gap: '15px',
-    marginBottom: '10px'
+    gap: isMobile ? '1vh' : '1.5vw',
+    marginBottom: '1vh'
 });
 
 const socialMedia = [
@@ -738,8 +755,8 @@ const socialMedia = [
     }, { href: social.href, target: '_blank' });
 
     const img = createElement('img', {
-        width: '24px',
-        height: '24px',
+        width: isMobile ? '5vw' : '2.4vw',
+        height: isMobile ? '5vw' : '2.4vw',
         display: 'block',
         transition: 'transform 0.3s ease'
     }, { src: `assets/${social.src}`, alt: `${social.platform} Logo` });
@@ -759,12 +776,19 @@ const socialMedia = [
 
 socialLinks.append(...socialMedia);
 
-const email = createElement('p', { fontSize: '14px', margin: '5px 0', color: '#FFFFFF' }, {}, ['All Rights Reserved']);
-const copyright = createElement('p', { fontSize: '14px', margin: '5px 0', color: '#FFFFFF' }, {}, ['© 2025 Dash Studios Inc.']);
+const email = createElement('p', { 
+    fontSize: '2vh', 
+    margin: '0.5vh 0', 
+    color: '#FFFFFF' 
+}, {}, ['All Rights Reserved']);
+const copyright = createElement('p', { 
+    fontSize: '2vh', 
+    margin: '0.5vh 0', 
+    color: '#FFFFFF' 
+}, {}, ['© 2025 Dash Studios Inc.']);
 footerRight.append(socialLinks, email, copyright);
 
 footer.append(footerLeft, footerCenter, footerRight);
-fadeInOnScroll(footer);
 
 // Append all sections to the app container
 app.append(header, mainContent, footer);

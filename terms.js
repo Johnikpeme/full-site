@@ -1,6 +1,9 @@
 // Get the app container
 const app = document.getElementById('app');
 
+// Determine if the device is mobile (declared once)
+const isMobile = window.innerWidth <= 768;
+
 // Helper function to create elements with styles and attributes
 function createElement(tag, styles = {}, attributes = {}, children = []) {
     const element = document.createElement(tag);
@@ -67,10 +70,10 @@ styleSheet.textContent = `
     }
     .terms-section {
         background-color: #000000;
-        width: '100%';
-        padding: '100px 20px';
-        color: '#FFFFFF';
-        text-align: 'left';
+        width: 100%;
+        padding: 100px 20px;
+        color: #FFFFFF;
+        text-align: left;
     }
     .terms-section h2 {
         font-size: 48px;
@@ -98,11 +101,13 @@ styleSheet.textContent = `
     .terms-section li {
         margin-bottom: 8px;
     }
-    
     /* Mobile responsiveness */
     @media (max-width: 768px) {
         .news-article {
             width: 100%; /* One article per row */
+        }
+        .terms-section {
+            margin-top: 80px; /* Push section down on mobile */
         }
         .terms-section h2 {
             font-size: 36px;
@@ -112,6 +117,41 @@ styleSheet.textContent = `
         }
         .terms-section p, .terms-section ul {
             font-size: 14px;
+        }
+        footer {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .footer-left, .footer-center {
+            margin-bottom: 20px;
+        }
+        .footer-left, .footer-right {
+            text-align: center;
+        }
+        .footer-center ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-center ul li a {
+            font-size: 12px;
+        }
+        .footer-right .social-links {
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+        .footer-right .social-links img {
+            width: 20px;
+            height: 20px;
+        }
+        .footer-right p {
+            font-size: 12px;
+            color: #FFFFFF;
+        }
+        .footer-logo img {
+            height: 30px;
         }
     }
 `;
@@ -180,25 +220,7 @@ function waitForImages() {
     });
 }
 
-// Fade-in animation for sections on scroll
-const fadeInOnScroll = (element) => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(20px)';
-    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(element);
-};
-
-// Header (Same as Previous Pages)
+// Header
 const header = createElement('header', {
     display: 'flex',
     justifyContent: 'space-between',
@@ -281,7 +303,7 @@ const getInTouch = createElement('button', {
     fontSize: '2.2vh',
     display: 'flex',
     alignItems: 'center',
-    marginRight: '2vw', // Default for desktop
+    marginRight: '2vw',
     animation: 'pulse 2s infinite',
     transition: 'transform 0.3s ease, background-color 0.3s ease'
 }, {}, [
@@ -289,33 +311,25 @@ const getInTouch = createElement('button', {
     'Get in touch'
 ]);
 
-// Add click handler for email functionality
 getInTouch.addEventListener('click', () => {
     window.location.href = 'mailto:support@dashstudios.tech';
 });
 
-// Function to set responsive properties for Get in Touch button
 function setGetInTouchStyles() {
     if (window.innerWidth <= 768) {
-        // Mobile properties
         getInTouch.style.marginRight = '12vw';
-        getInTouch.style.fontSize = '1.8vh'; // Slightly smaller for mobile
-        getInTouch.style.padding = '1.5vh 3vw'; // Adjust padding for mobile
+        getInTouch.style.fontSize = '1.8vh';
+        getInTouch.style.padding = '1.5vh 3vw';
     } else {
-        // Desktop properties
         getInTouch.style.marginRight = '2vw';
         getInTouch.style.fontSize = '2.2vh';
         getInTouch.style.padding = '1vh 2vw';
     }
 }
 
-// Initial setup
 setGetInTouchStyles();
-
-// Update on resize
 window.addEventListener('resize', setGetInTouchStyles);
 
-// Hover effects
 getInTouch.addEventListener('mouseenter', () => {
     getInTouch.style.transform = 'scale(1.1)';
     getInTouch.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
@@ -345,6 +359,7 @@ const termsSection = createElement('section', {
     backgroundColor: '#000000',
     width: '100%',
     padding: '100px 20px',
+    marginTop: isMobile ? '60px' : '0',
     textAlign: 'left',
     display: 'flex',
     flexDirection: 'column',
@@ -352,7 +367,7 @@ const termsSection = createElement('section', {
 }, { class: 'terms-section' });
 
 const termsTitle = createElement('h2', {
-    fontSize: '48px',
+    fontSize: isMobile ? '36px' : '48px',
     fontWeight: '700',
     color: '#FFFFFF',
     marginBottom: '40px',
@@ -448,32 +463,32 @@ const termsContent = [
 ];
 
 termsSection.append(termsTitle, ...termsContent);
-fadeInOnScroll(termsSection);
 
-// Footer (Same as Previous Page)
+// Footer
 const footer = createElement('footer', {
+    className: 'footer',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: isMobile ? 'center' : 'space-between',
     alignItems: 'center',
-    padding: '20px 50px',
+    flexDirection: isMobile ? 'column' : 'row',
+    padding: '2vh 5vw',
     backgroundColor: '#000000',
     borderTop: '1px solid #333'
 });
 
-const footerLeft = createElement('div', {});
+const footerLeft = createElement('div', { 
+    className: 'footer-left',
+    textAlign: isMobile ? 'center' : 'left',
+    marginBottom: isMobile ? '2vh' : '0'
+});
 const footerLogo = createElement('div', { cursor: 'pointer' });
-const footerLogoLink = createElement('a', {});
+const footerLogoLink = createElement('a', {}, { href: 'index.html' });
 const footerLogoIcon = createElement('img', {
-    height: '40px',
+    height: '5vh',
     width: 'auto',
     display: 'block',
     transition: 'transform 0.5s ease'
 }, { src: 'assets/logo.png', alt: 'Logo' });
-
-footerLogoLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: '0', behavior: 'smooth' });
-});
 
 footerLogoLink.addEventListener('mouseenter', () => {
     footerLogoIcon.style.animation = 'spin 0.5s ease-in-out';
@@ -483,22 +498,29 @@ footerLogoLink.appendChild(footerLogoIcon);
 footerLogo.appendChild(footerLogoLink);
 footerLeft.appendChild(footerLogo);
 
-const footerCenter = createElement('div', {});
-const footerNav = createElement('ul', {
-    display: 'flex',
-    listStyle: 'none',
-    gap: '20px'
+const footerCenter = createElement('div', { 
+    className: 'footer-center',
+    textAlign: isMobile ? 'center' : 'center',
+    marginBottom: isMobile ? '2vh' : '0'
+});
+const footerNav = createElement('ul', { 
+    className: 'footer-nav',
+    display: 'flex', 
+    flexDirection: isMobile ? 'column' : 'row',
+    listStyle: 'none', 
+    gap: isMobile ? '1vh' : '2vw',
+    padding: '0'
 });
 
 const footerLinks = [
     { text: 'TERMS OF SERVICE', href: 'terms.html' },
-    { text: 'PRIVACY', href: 'privacy.hmtl' }
+    { text: 'PRIVACY', href: 'privacy.html' }
 ].map(link => {
     const li = createElement('li', {});
     const a = createElement('a', {
         color: '#FFFFFF',
         textDecoration: 'none',
-        fontSize: '14px',
+        fontSize: '2.2vh',
         textTransform: 'uppercase',
         transition: 'color 0.3s ease, transform 0.3s ease'
     }, { href: link.href }, [link.text]);
@@ -518,21 +540,28 @@ const footerLinks = [
 footerNav.append(...footerLinks);
 footerCenter.appendChild(footerNav);
 
-const footerRight = createElement('div', { textAlign: 'right' });
-footerRight.className = 'footer-right';
+const footerRight = createElement('div', { 
+    className: 'footer-right', 
+    textAlign: isMobile ? 'center' : 'right',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: isMobile ? 'center' : 'flex-end'
+});
 
 const socialLinks = createElement('div', {
+    className: 'social-links',
     display: 'flex',
-    justifyContent: 'flex-end',
-    gap: '15px',
-    marginBottom: '10px'
+    flexDirection: isMobile ? 'column' : 'row',
+    justifyContent: 'center',
+    gap: isMobile ? '1vh' : '1.5vw',
+    marginBottom: '1vh'
 });
 
 const socialMedia = [
-    { platform: 'X', src: 'twitter.png', href: 'https://x.com' },
-    { platform: 'Instagram', src: 'instagram.png', href: 'https://instagram.com' },
-    { platform: 'YouTube', src: 'youtube.png', href: 'https://youtube.com' },
-    { platform: 'LinkedIn', src: 'linkedin.png', href: 'https://linkedin.com' }
+    { platform: 'X', src: 'twitter.png', href: 'https://x.com/DashStudiosInc/' },
+    { platform: 'Instagram', src: 'instagram.png', href: 'https://www.instagram.com/dashstudios.tech/' },
+    { platform: 'YouTube', src: 'youtube.png', href: 'https://www.youtube.com/channel/UCZuLS7Q8jemturg7B3FpxPg' },
+    { platform: 'LinkedIn', src: 'linkedin.png', href: 'https://www.linkedin.com/company/dash-studios-inc/' }
 ].map(social => {
     const a = createElement('a', {
         display: 'inline-block',
@@ -540,8 +569,8 @@ const socialMedia = [
     }, { href: social.href, target: '_blank' });
 
     const img = createElement('img', {
-        width: '24px',
-        height: '24px',
+        width: isMobile ? '5vw' : '2.4vw',
+        height: isMobile ? '5vw' : '2.4vw',
         display: 'block',
         transition: 'transform 0.3s ease'
     }, { src: `assets/${social.src}`, alt: `${social.platform} Logo` });
@@ -561,12 +590,19 @@ const socialMedia = [
 
 socialLinks.append(...socialMedia);
 
-const email = createElement('p', { fontSize: '14px', margin: '5px 0' }, {}, ['All Rights Reserved']);
-const copyright = createElement('p', { fontSize: '14px', margin: '5px 0' }, {}, ['© 2025 Dash Studios Inc.']);
+const email = createElement('p', { 
+    fontSize: '2vh', 
+    margin: '0.5vh 0', 
+    color: '#FFFFFF' 
+}, {}, ['All Rights Reserved']);
+const copyright = createElement('p', { 
+    fontSize: '2vh', 
+    margin: '0.5vh 0', 
+    color: '#FFFFFF' 
+}, {}, ['© 2025 Dash Studios Inc.']);
 footerRight.append(socialLinks, email, copyright);
 
 footer.append(footerLeft, footerCenter, footerRight);
-fadeInOnScroll(footer);
 
 // Append all sections to the app container
 app.append(header, termsSection, footer);

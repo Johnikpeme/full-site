@@ -755,17 +755,24 @@ setupObservers();
 window.addEventListener('resize', adjustNewsLayout);
 
 // Footer (Black Background)
+const isMobile = window.innerWidth <= 768;
+
 const footer = createElement('footer', {
     className: 'footer',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: isMobile ? 'center' : 'space-between',
     alignItems: 'center',
+    flexDirection: isMobile ? 'column' : 'row',
     padding: '2vh 5vw',
     backgroundColor: '#000000',
     borderTop: '1px solid #333'
 });
 
-const footerLeft = createElement('div', { className: 'footer-left' });
+const footerLeft = createElement('div', { 
+    className: 'footer-left',
+    textAlign: isMobile ? 'center' : 'left',
+    marginBottom: isMobile ? '2vh' : '0'
+});
 const footerLogo = createElement('div', { cursor: 'pointer' });
 const footerLogoLink = createElement('a', {}, { href: 'index.html' });
 const footerLogoIcon = createElement('img', {
@@ -783,12 +790,18 @@ footerLogoLink.appendChild(footerLogoIcon);
 footerLogo.appendChild(footerLogoLink);
 footerLeft.appendChild(footerLogo);
 
-const footerCenter = createElement('div', { className: 'footer-center' });
+const footerCenter = createElement('div', { 
+    className: 'footer-center',
+    textAlign: isMobile ? 'center' : 'center',
+    marginBottom: isMobile ? '2vh' : '0'
+});
 const footerNav = createElement('ul', { 
     className: 'footer-nav',
     display: 'flex', 
+    flexDirection: isMobile ? 'column' : 'row',
     listStyle: 'none', 
-    gap: '2vw' 
+    gap: isMobile ? '1vh' : '2vw',
+    padding: '0'
 });
 
 const footerLinks = [
@@ -821,14 +834,18 @@ footerCenter.appendChild(footerNav);
 
 const footerRight = createElement('div', { 
     className: 'footer-right', 
-    textAlign: 'right' 
+    textAlign: isMobile ? 'center' : 'right',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: isMobile ? 'center' : 'flex-end'
 });
 
 const socialLinks = createElement('div', {
     className: 'social-links',
     display: 'flex',
+    flexDirection: isMobile ? 'column' : 'row',
     justifyContent: 'center',
-    gap: '1.5vw',
+    gap: isMobile ? '1vh' : '1.5vw',
     marginBottom: '1vh'
 });
 
@@ -844,8 +861,8 @@ const socialMedia = [
     }, { href: social.href, target: '_blank' });
 
     const img = createElement('img', {
-        width: '2.4vw',
-        height: '2.4vw',
+        width: isMobile ? '5vw' : '2.4vw',
+        height: isMobile ? '5vw' : '2.4vw',
         display: 'block',
         transition: 'transform 0.3s ease'
     }, { src: `assets/${social.src}`, alt: `${social.platform} Logo` });
@@ -865,8 +882,16 @@ const socialMedia = [
 
 socialLinks.append(...socialMedia);
 
-const email = createElement('p', { fontSize: '2vh', margin: '0.5vh 0', color: '#FFFFFF' }, {}, ['All Rights Reserved']);
-const copyright = createElement('p', { fontSize: '2vh', margin: '0.5vh 0', color: '#FFFFFF' }, {}, ['© 2025 Dash Studios Inc.']);
+const email = createElement('p', { 
+    fontSize: '2vh', 
+    margin: '0.5vh 0', 
+    color: '#FFFFFF' 
+}, {}, ['All Rights Reserved']);
+const copyright = createElement('p', { 
+    fontSize: '2vh', 
+    margin: '0.5vh 0', 
+    color: '#FFFFFF' 
+}, {}, ['© 2025 Dash Studios Inc.']);
 footerRight.append(socialLinks, email, copyright);
 
 footer.append(footerLeft, footerCenter, footerRight);

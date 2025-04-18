@@ -156,67 +156,51 @@ const fadeInOnScroll = (element) => {
     observer.observe(element);
 };
 
-// Header (Same as Previous Pages)
+// Header (Sticky, Black Background)
 const header = createElement('header', {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '20px 30px',
+    padding: '2vh 3vw',
     backgroundColor: '#000000',
     borderBottom: '1px solid #333',
     position: 'fixed',
     top: '0',
     left: '0',
-    right: '0',
+    width: '100vw',
     zIndex: '1000'
 });
 
-const headerLeft = createElement('div', {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '20px'
-});
-
+const headerLeft = createElement('div', { display: 'flex', alignItems: 'center', gap: '2vw' });
 const logo = createElement('div', { cursor: 'pointer' });
 const logoLink = createElement('a', {}, { href: 'index.html' });
 const logoIcon = createElement('img', {
-    height: '40px',
+    height: '5vh',
     width: 'auto',
     display: 'block',
     transition: 'transform 0.5s ease'
 }, { src: 'assets/logo.png', alt: 'Logo' });
 
-logoLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: '0', behavior: 'smooth' });
-});
-
 logoLink.appendChild(logoIcon);
 logo.appendChild(logoLink);
 
 const nav = createElement('nav', {});
-const navLinks = createElement('ul', {
-    listStyle: 'none',
-    display: 'flex',
-    alignItems: 'center'
-});
+const navLinks = createElement('ul', { listStyle: 'none', display: 'flex', alignItems: 'center' });
 navLinks.className = 'nav-links';
 const navItems = ['WHO WE ARE', 'CAREERS', 'NEWS'].map(text => {
-    const li = createElement('li', { margin: '0 15px', display: 'inline-block' });
+    const li = createElement('li', { margin: '0 1.5vw', display: 'inline-block' });
     const a = createElement('a', {
         color: '#FFFFFF',
         textDecoration: 'none',
-        fontSize: '16px',
-        paddingBottom: '5px',
+        fontSize: '2.2vh',
+        paddingBottom: '0.5vh',
         display: 'inline-block',
         textTransform: 'uppercase',
         transition: 'border-bottom 0.3s ease, transform 0.3s ease, color 0.3s ease'
-    }, { 
-        href: text === 'WHO WE ARE' ? 'who-we-are.html' : (text === 'CAREERS' ? 'careers.html' : 'news.html') 
-    }, [text]);
+    }, { href: text === 'WHO WE ARE' ? 'who-we-are.html' : (text === 'CAREERS' ? 'careers.html' : 'news.html') }, [text]);
 
     a.addEventListener('mouseenter', () => {
-        a.style.borderBottom = '3px solid #FFFFFF';
+        a.style.borderBottom = '0.3vh solid #FFFFFF';
         a.style.color = '#E0E0E0';
         a.style.animation = 'bounce 0.4s ease';
     });
@@ -234,6 +218,7 @@ nav.appendChild(navLinks);
 headerLeft.append(logo, nav);
 
 const headerRight = createElement('div', { display: 'flex', alignItems: 'center' });
+// Get in Touch Button
 const getInTouch = createElement('button', {
     backgroundColor: 'transparent',
     border: '1px solid #FFFFFF',
@@ -288,7 +273,10 @@ getInTouch.addEventListener('mouseleave', () => {
     getInTouch.style.backgroundColor = 'transparent';
 });
 
-const hamburger = createElement('div', {});
+// Hamburger Menu
+const hamburger = createElement('div', {
+    marginLeft: '-1vw' // Moves it slightly to the left
+});
 hamburger.className = 'hamburger';
 const line1 = createElement('span', {});
 const line2 = createElement('span', {});
@@ -335,30 +323,33 @@ const noRolesMessage = createElement('p', {
 openRoles.append(rolesTitle, noRolesMessage);
 fadeInOnScroll(openRoles);
 
-// Footer (Same as Previous Page)
+// Footer (Black Background)
+const isMobile = window.innerWidth <= 768;
+
 const footer = createElement('footer', {
+    className: 'footer',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: isMobile ? 'center' : 'space-between',
     alignItems: 'center',
-    padding: '20px 50px',
+    flexDirection: isMobile ? 'column' : 'row',
+    padding: '2vh 5vw',
     backgroundColor: '#000000',
     borderTop: '1px solid #333'
 });
 
-const footerLeft = createElement('div', {});
+const footerLeft = createElement('div', { 
+    className: 'footer-left',
+    textAlign: isMobile ? 'center' : 'left',
+    marginBottom: isMobile ? '2vh' : '0'
+});
 const footerLogo = createElement('div', { cursor: 'pointer' });
-const footerLogoLink = createElement('a', {});
+const footerLogoLink = createElement('a', {}, { href: 'index.html' });
 const footerLogoIcon = createElement('img', {
-    height: '40px',
+    height: '5vh',
     width: 'auto',
     display: 'block',
     transition: 'transform 0.5s ease'
 }, { src: 'assets/logo.png', alt: 'Logo' });
-
-footerLogoLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: '0', behavior: 'smooth' });
-});
 
 footerLogoLink.addEventListener('mouseenter', () => {
     footerLogoIcon.style.animation = 'spin 0.5s ease-in-out';
@@ -368,11 +359,18 @@ footerLogoLink.appendChild(footerLogoIcon);
 footerLogo.appendChild(footerLogoLink);
 footerLeft.appendChild(footerLogo);
 
-const footerCenter = createElement('div', {});
-const footerNav = createElement('ul', {
-    display: 'flex',
-    listStyle: 'none',
-    gap: '20px'
+const footerCenter = createElement('div', { 
+    className: 'footer-center',
+    textAlign: isMobile ? 'center' : 'center',
+    marginBottom: isMobile ? '2vh' : '0'
+});
+const footerNav = createElement('ul', { 
+    className: 'footer-nav',
+    display: 'flex', 
+    flexDirection: isMobile ? 'column' : 'row',
+    listStyle: 'none', 
+    gap: isMobile ? '1vh' : '2vw',
+    padding: '0'
 });
 
 const footerLinks = [
@@ -383,7 +381,7 @@ const footerLinks = [
     const a = createElement('a', {
         color: '#FFFFFF',
         textDecoration: 'none',
-        fontSize: '14px',
+        fontSize: '2.2vh',
         textTransform: 'uppercase',
         transition: 'color 0.3s ease, transform 0.3s ease'
     }, { href: link.href }, [link.text]);
@@ -403,21 +401,28 @@ const footerLinks = [
 footerNav.append(...footerLinks);
 footerCenter.appendChild(footerNav);
 
-const footerRight = createElement('div', { textAlign: 'right' });
-footerRight.className = 'footer-right';
+const footerRight = createElement('div', { 
+    className: 'footer-right', 
+    textAlign: isMobile ? 'center' : 'right',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: isMobile ? 'center' : 'flex-end'
+});
 
 const socialLinks = createElement('div', {
+    className: 'social-links',
     display: 'flex',
-    justifyContent: 'flex-end',
-    gap: '15px',
-    marginBottom: '10px'
+    flexDirection: isMobile ? 'column' : 'row',
+    justifyContent: 'center',
+    gap: isMobile ? '1vh' : '1.5vw',
+    marginBottom: '1vh'
 });
 
 const socialMedia = [
-    { platform: 'X', src: 'twitter.png', href: 'https://x.com' },
-    { platform: 'Instagram', src: 'instagram.png', href: 'https://instagram.com' },
-    { platform: 'YouTube', src: 'youtube.png', href: 'https://youtube.com' },
-    { platform: 'LinkedIn', src: 'linkedin.png', href: 'https://linkedin.com' }
+    { platform: 'X', src: 'twitter.png', href: 'https://x.com/DashStudiosInc/' },
+    { platform: 'Instagram', src: 'instagram.png', href: 'https://www.instagram.com/dashstudios.tech/' },
+    { platform: 'YouTube', src: 'youtube.png', href: 'https://www.youtube.com/channel/UCZuLS7Q8jemturg7B3FpxPg' },
+    { platform: 'LinkedIn', src: 'linkedin.png', href: 'https://www.linkedin.com/company/dash-studios-inc/' }
 ].map(social => {
     const a = createElement('a', {
         display: 'inline-block',
@@ -425,8 +430,8 @@ const socialMedia = [
     }, { href: social.href, target: '_blank' });
 
     const img = createElement('img', {
-        width: '24px',
-        height: '24px',
+        width: isMobile ? '5vw' : '2.4vw',
+        height: isMobile ? '5vw' : '2.4vw',
         display: 'block',
         transition: 'transform 0.3s ease'
     }, { src: `assets/${social.src}`, alt: `${social.platform} Logo` });
@@ -446,8 +451,16 @@ const socialMedia = [
 
 socialLinks.append(...socialMedia);
 
-const email = createElement('p', { fontSize: '14px', margin: '5px 0' }, {}, ['All Rights Reserved']);
-const copyright = createElement('p', { fontSize: '14px', margin: '5px 0' }, {}, ['© 2025 Dash Studios Inc.']);
+const email = createElement('p', { 
+    fontSize: '2vh', 
+    margin: '0.5vh 0', 
+    color: '#FFFFFF' 
+}, {}, ['All Rights Reserved']);
+const copyright = createElement('p', { 
+    fontSize: '2vh', 
+    margin: '0.5vh 0', 
+    color: '#FFFFFF' 
+}, {}, ['© 2025 Dash Studios Inc.']);
 footerRight.append(socialLinks, email, copyright);
 
 footer.append(footerLeft, footerCenter, footerRight);

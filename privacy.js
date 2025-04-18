@@ -67,10 +67,10 @@ styleSheet.textContent = `
     }
     .privacy-section {
         background-color: #000000;
-        width: '100%';
-        padding: '100px 20px';
-        color: '#FFFFFF';
-        text-align: 'left';
+        width: 100%;
+        padding: 100px 20px;
+        color: #FFFFFF;
+        text-align: left;
     }
     .privacy-section h2 {
         font-size: 48px;
@@ -98,7 +98,21 @@ styleSheet.textContent = `
     .privacy-section li {
         margin-bottom: 8px;
     }
-    
+    /* Animation keyframes */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+    @keyframes wobble {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(-5deg); }
+        75% { transform: rotate(5deg); }
+        100% { transform: rotate(0deg); }
+    }
     /* Mobile responsiveness */
     @media (max-width: 768px) {
         .news-article {
@@ -112,6 +126,41 @@ styleSheet.textContent = `
         }
         .privacy-section p, .privacy-section ul {
             font-size: 14px;
+        }
+        footer {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        footer > div:nth-child(1), footer > div:nth-child(2) {
+            margin-bottom: 20px;
+        }
+        footer > div:nth-child(1), footer > div:nth-child(3) {
+            text-align: center;
+        }
+        footer > div:nth-child(2) > ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+        footer > div:nth-child(2) > ul > li > a {
+            font-size: 12px;
+        }
+        footer > div:nth-child(3) > div {
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+        footer > div:nth-child(3) > div > a > img {
+            width: 20px;
+            height: 20px;
+        }
+        footer > div:nth-child(3) > p {
+            font-size: 12px;
+            color: #FFFFFF;
+        }
+        footer > div:nth-child(1) > div > a > img {
+            height: 30px;
         }
     }
 `;
@@ -180,25 +229,7 @@ function waitForImages() {
     });
 }
 
-// Fade-in animation for sections on scroll
-const fadeInOnScroll = (element) => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(20px)';
-    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(element);
-};
-
-// Header (Same as Previous Pages)
+// Header (Unchanged)
 const header = createElement('header', {
     display: 'flex',
     justifyContent: 'space-between',
@@ -281,7 +312,7 @@ const getInTouch = createElement('button', {
     fontSize: '2.2vh',
     display: 'flex',
     alignItems: 'center',
-    marginRight: '2vw', // Default for desktop
+    marginRight: '2vw',
     animation: 'pulse 2s infinite',
     transition: 'transform 0.3s ease, background-color 0.3s ease'
 }, {}, [
@@ -289,33 +320,25 @@ const getInTouch = createElement('button', {
     'Get in touch'
 ]);
 
-// Add click handler for email functionality
 getInTouch.addEventListener('click', () => {
     window.location.href = 'mailto:support@dashstudios.tech';
 });
 
-// Function to set responsive properties for Get in Touch button
 function setGetInTouchStyles() {
     if (window.innerWidth <= 768) {
-        // Mobile properties
         getInTouch.style.marginRight = '12vw';
-        getInTouch.style.fontSize = '1.8vh'; // Slightly smaller for mobile
-        getInTouch.style.padding = '1.5vh 3vw'; // Adjust padding for mobile
+        getInTouch.style.fontSize = '1.8vh';
+        getInTouch.style.padding = '1.5vh 3vw';
     } else {
-        // Desktop properties
         getInTouch.style.marginRight = '2vw';
         getInTouch.style.fontSize = '2.2vh';
         getInTouch.style.padding = '1vh 2vw';
     }
 }
 
-// Initial setup
 setGetInTouchStyles();
-
-// Update on resize
 window.addEventListener('resize', setGetInTouchStyles);
 
-// Hover effects
 getInTouch.addEventListener('mouseenter', () => {
     getInTouch.style.transform = 'scale(1.1)';
     getInTouch.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
@@ -341,10 +364,12 @@ hamburger.addEventListener('click', () => {
 });
 
 // Privacy Policy Section
+const isMobile = window.innerWidth <= 768;
 const privacySection = createElement('section', {
     backgroundColor: '#000000',
     width: '100%',
     padding: '100px 20px',
+    marginTop: isMobile ? '60px' : '0',
     textAlign: 'left',
     display: 'flex',
     flexDirection: 'column',
@@ -352,7 +377,7 @@ const privacySection = createElement('section', {
 }, { class: 'privacy-section' });
 
 const privacyTitle = createElement('h2', {
-    fontSize: '48px',
+    fontSize: isMobile ? '36px' : '48px',
     fontWeight: '700',
     color: '#FFFFFF',
     marginBottom: '40px',
@@ -549,7 +574,6 @@ const privacyContent = [
     createElement('p', {}, {}, [
         'Email: support@dashstudios.tech'
     ]),
-
     createElement('p', {}, {}, [
         'You may also lodge a complaint with the Nigeria Data Protection Commission (NDPC) if you believe we’ve mishandled your data.'
     ]),
@@ -564,23 +588,26 @@ const privacyContent = [
 ];
 
 privacySection.append(privacyTitle, ...privacyContent);
-fadeInOnScroll(privacySection);
 
-// Footer (Same as Previous Page)
+// Footer (Adapted from terms.html)
 const footer = createElement('footer', {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: isMobile ? 'center' : 'space-between',
     alignItems: 'center',
-    padding: '20px 50px',
+    flexDirection: isMobile ? 'column' : 'row',
+    padding: isMobile ? '20px' : '20px 50px',
     backgroundColor: '#000000',
     borderTop: '1px solid #333'
 });
 
-const footerLeft = createElement('div', {});
+const footerLeft = createElement('div', { 
+    textAlign: isMobile ? 'center' : 'left',
+    marginBottom: isMobile ? '20px' : '0'
+});
 const footerLogo = createElement('div', { cursor: 'pointer' });
-const footerLogoLink = createElement('a', {});
+const footerLogoLink = createElement('a', {}, { href: 'index.html' });
 const footerLogoIcon = createElement('img', {
-    height: '40px',
+    height: isMobile ? '30px' : '40px',
     width: 'auto',
     display: 'block',
     transition: 'transform 0.5s ease'
@@ -588,7 +615,7 @@ const footerLogoIcon = createElement('img', {
 
 footerLogoLink.addEventListener('click', (e) => {
     e.preventDefault();
-    window.scrollTo({ top: '0', behavior: 'smooth' });
+    window.location.href = 'index.html';
 });
 
 footerLogoLink.addEventListener('mouseenter', () => {
@@ -599,11 +626,16 @@ footerLogoLink.appendChild(footerLogoIcon);
 footerLogo.appendChild(footerLogoLink);
 footerLeft.appendChild(footerLogo);
 
-const footerCenter = createElement('div', {});
-const footerNav = createElement('ul', {
-    display: 'flex',
-    listStyle: 'none',
-    gap: '20px'
+const footerCenter = createElement('div', { 
+    textAlign: isMobile ? 'center' : 'center',
+    marginBottom: isMobile ? '20px' : '0'
+});
+const footerNav = createElement('ul', { 
+    display: 'flex', 
+    flexDirection: isMobile ? 'column' : 'row',
+    listStyle: 'none', 
+    gap: isMobile ? '10px' : '20px',
+    padding: '0'
 });
 
 const footerLinks = [
@@ -614,7 +646,7 @@ const footerLinks = [
     const a = createElement('a', {
         color: '#FFFFFF',
         textDecoration: 'none',
-        fontSize: '14px',
+        fontSize: isMobile ? '12px' : '14px',
         textTransform: 'uppercase',
         transition: 'color 0.3s ease, transform 0.3s ease'
     }, { href: link.href }, [link.text]);
@@ -625,6 +657,7 @@ const footerLinks = [
     });
     a.addEventListener('mouseleave', () => {
         a.style.color = '#FFFFFF';
+        a.style.animation = 'none';
     });
 
     li.appendChild(a);
@@ -634,21 +667,26 @@ const footerLinks = [
 footerNav.append(...footerLinks);
 footerCenter.appendChild(footerNav);
 
-const footerRight = createElement('div', { textAlign: 'right' });
-footerRight.className = 'footer-right';
+const footerRight = createElement('div', { 
+    textAlign: isMobile ? 'center' : 'right',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: isMobile ? 'center' : 'flex-end'
+});
 
 const socialLinks = createElement('div', {
     display: 'flex',
-    justifyContent: 'flex-end',
-    gap: '15px',
+    flexDirection: isMobile ? 'column' : 'row',
+    justifyContent: isMobile ? 'center' : 'flex-end',
+    gap: isMobile ? '10px' : '15px',
     marginBottom: '10px'
 });
 
 const socialMedia = [
-    { platform: 'X', src: 'twitter.png', href: 'https://x.com' },
-    { platform: 'Instagram', src: 'instagram.png', href: 'https://instagram.com' },
-    { platform: 'YouTube', src: 'youtube.png', href: 'https://youtube.com' },
-    { platform: 'LinkedIn', src: 'linkedin.png', href: 'https://linkedin.com' }
+    { platform: 'X', src: 'twitter.png', href: 'https://x.com/DashStudiosInc/' },
+    { platform: 'Instagram', src: 'instagram.png', href: 'https://www.instagram.com/dashstudios.tech/' },
+    { platform: 'YouTube', src: 'youtube.png', href: 'https://www.youtube.com/channel/UCZuLS7Q8jemturg7B3FpxPg' },
+    { platform: 'LinkedIn', src: 'linkedin.png', href: 'https://www.linkedin.com/company/dash-studios-inc/' }
 ].map(social => {
     const a = createElement('a', {
         display: 'inline-block',
@@ -656,8 +694,8 @@ const socialMedia = [
     }, { href: social.href, target: '_blank' });
 
     const img = createElement('img', {
-        width: '24px',
-        height: '24px',
+        width: isMobile ? '20px' : '24px',
+        height: isMobile ? '20px' : '24px',
         display: 'block',
         transition: 'transform 0.3s ease'
     }, { src: `assets/${social.src}`, alt: `${social.platform} Logo` });
@@ -669,6 +707,7 @@ const socialMedia = [
         img.style.filter = 'brightness(1.2)';
     });
     a.addEventListener('mouseleave', () => {
+        img.style.animation = 'none';
         img.style.filter = 'brightness(1)';
     });
 
@@ -677,12 +716,19 @@ const socialMedia = [
 
 socialLinks.append(...socialMedia);
 
-const email = createElement('p', { fontSize: '14px', margin: '5px 0' }, {}, ['All Rights Reserved']);
-const copyright = createElement('p', { fontSize: '14px', margin: '5px 0' }, {}, ['© 2025 Dash Studios Inc.']);
+const email = createElement('p', { 
+    fontSize: isMobile ? '12px' : '14px', 
+    margin: '5px 0', 
+    color: '#FFFFFF' 
+}, {}, ['All Rights Reserved']);
+const copyright = createElement('p', { 
+    fontSize: isMobile ? '12px' : '14px', 
+    margin: '5px 0', 
+    color: '#FFFFFF' 
+}, {}, ['© 2025 Dash Studios Inc.']);
 footerRight.append(socialLinks, email, copyright);
 
 footer.append(footerLeft, footerCenter, footerRight);
-fadeInOnScroll(footer);
 
 // Append all sections to the app container
 app.append(header, privacySection, footer);
