@@ -545,6 +545,11 @@ mainArticleTitleWrapper.append(mainArticleTag, mainArticleTitle);
 
 mainArticle.append(mainImageWrapper, mainArticleTitleWrapper);
 
+// Add click event to mainArticle to open the Medium article in a new tab
+mainArticle.addEventListener('click', () => {
+    window.open('https://medium.com/@dashgamingstudios/nouns-hunt-2-0-full-release-unleashes-global-multiplayer-and-game-changing-upgrades-eec11c0702cc', '_blank');
+});
+
 // Smaller Articles
 const smallerArticles = createElement('div', {
     className: 'smaller-articles',
@@ -553,7 +558,7 @@ const smallerArticles = createElement('div', {
 });
 
 const smallArticlesData = [
-    { title: 'Nouns Hunt Release Trailer', tag: 'VIDEO', tagIcon: '🎥', src: 'news-3-2.jpg', link: 'https://example.com/news-3' },
+    { title: 'Nouns Huntlycemic Release Trailer', tag: 'VIDEO', tagIcon: '🎥', src: 'news-3-2.jpg', link: 'https://example.com/news-3' },
     { title: '/Dev Insights: Building Nouns Hunt', tag: 'EXCL: DASH STUDIOS', tagIcon: '🧠', src: 'news-1.jpeg', link: 'https://example.com/news-1' },
     { title: 'UC Launch: Dash Studios', tag: 'NEWS', tagIcon: '📰', src: 'news-4.jpg', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7221409228941328386' },
     { title: 'B-School Disrupt SF 2024', tag: 'NEWS', tagIcon: '📰', src: 'news-2.jpg', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7261874551175684096' }
@@ -677,7 +682,7 @@ function adjustNewsLayout() {
             }
             
             // Text container
-            const textContainer = article.querySelector('.article-text');
+            const textContainer = article.querySelector('div');
             if (textContainer) {
                 textContainer.style.width = '70%';
             }

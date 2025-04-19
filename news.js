@@ -317,7 +317,7 @@ const newsTitle = createElement('h2', {
 
 // News Articles Data (5 articles)
 const newsArticles = [
-    { img: 'news-main.jpg', title: 'Nouns Hunt v2.0 Out Now!', date: 'April 11, 2025', desc: 'Nouns Hunt v2.0 releases with new updates like Public Multiplayer and AI Powered Database. Enjoy Nouns Hunt like never before.', link: 'https://example.com/news1' },
+    { img: 'news-main.jpg', title: 'Nouns Hunt v2.0 Out Now!', date: 'April 11, 2025', desc: 'Nouns Hunt v2.0 releases with new updates like Public Multiplayer and AI Powered Database. Enjoy Nouns Hunt like never before.', link: 'https://medium.com/@dashgamingstudios/nouns-hunt-2-0-full-release-unleashes-global-multiplayer-and-game-changing-upgrades-eec11c0702cc' },
     { img: 'news-3.jpg', title: 'Nouns Hunt Release Trailer', date: 'April 11, 2025', desc: 'Watch the official trailer for Nouns Hunt’s big update.', link: 'https://example.com/news3' },
     { img: 'slide10.jpg', title: 'Dev Insights: Building Nouns Hunt', date: 'February 28, 2025', desc: 'Behind-the-scenes look at creating our flagship game.', link: 'https://example.com/news5' },
     { img: 'news-2.jpg', title: 'B-School Disrupt SF 2024', date: 'November 4, 2024', desc: 'Dash Studios shines at this year’s tech event in San Francisco.', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7261874551175684096' },
