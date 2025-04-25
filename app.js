@@ -558,7 +558,7 @@ const smallerArticles = createElement('div', {
 });
 
 const smallArticlesData = [
-    { title: 'Nouns Huntlycemic Release Trailer', tag: 'VIDEO', tagIcon: '🎥', src: 'news-3-2.jpg', link: 'https://example.com/news-3' },
+    { title: 'Nouns Hunt Release Trailer', tag: 'VIDEO', tagIcon: '🎥', src: 'news-3-2.jpg', link: 'https://example.com/news-3' },
     { title: '/Dev Insights: Building Nouns Hunt', tag: 'EXCL: DASH STUDIOS', tagIcon: '🧠', src: 'news-1.jpeg', link: 'https://example.com/news-1' },
     { title: 'UC Launch: Dash Studios', tag: 'NEWS', tagIcon: '📰', src: 'news-4.jpg', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7221409228941328386' },
     { title: 'B-School Disrupt SF 2024', tag: 'NEWS', tagIcon: '📰', src: 'news-2.jpg', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7261874551175684096' }
