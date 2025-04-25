@@ -586,7 +586,7 @@ const newsArticles = [
     {
         image: 'news-3.jpg',
         description: 'Nouns Hunt v2.0 releases with major changes and public multiplayer.',
-        link: '#article1'
+        link: 'https://medium.com/@dashgamingstudios/nouns-hunt-2-0-full-release-unleashes-global-multiplayer-and-game-changing-upgrades-eec11c0702cc'
     },
     {
         image: 'slide10.jpg',
