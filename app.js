@@ -334,27 +334,89 @@ const gameImagesContainer = createElement('div', {
     maxWidth: '90vw',
     margin: '0 auto',
     position: 'relative',
-    overflowX: 'hidden' // Prevent horizontal overflow
+    overflowX: 'hidden'
 });
 
 const gameImages = [
-    { src: 'nouns-hunt.jpg', alt: 'Nouns Hunt', link: 'nounshunt.html' },
-    { src: 'nouns-attack.jpg', alt: 'Nouns Attack', hasTag: true }
+    { src: 'nouns-hunt.jpg', alt: 'Nouns Hunt', link: 'nounshunt.html', hoverText: 'Visit Website' },
+    { src: 'nouns-attack.jpg', alt: 'Nouns Attack', hasTag: true, hoverText: 'Join Closed Beta', link: 'https://forms.gle/5kDsWbJnwpq5FKM7A' }
 ].map(image => {
     const imageWrapper = createElement('div', { 
         position: 'relative',
-        display: 'inline-block' // Ensures wrapper fits image size
+        display: 'inline-block'
     });
 
     const imageElement = createElement('img', {
-        borderRadius: '1vh'
+        borderRadius: '1vh',
+        transition: 'opacity 0.3s ease'
     }, { src: `assets/${image.src}`, alt: image.alt });
 
-    imageElement.addEventListener('mouseenter', () => {
-        imageElement.style.border = '0.2vh solid #FFFFFF';
+    // Create overlay div
+    const overlay = createElement('div', {
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        opacity: '0',
+        transition: 'opacity 0.3s ease',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: '1vh',
+        zIndex: '5'
     });
-    imageElement.addEventListener('mouseleave', () => {
+
+    // Create hover text container (rectangle with curved edges)
+    const hoverTextContainer = createElement('a', {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        padding: '1.5vh 3vw',
+        borderRadius: '2vh',
+        textDecoration: 'none',
+        cursor: 'pointer',
+        transition: 'background-color 0.3s ease, opacity 0.3s ease',
+        opacity: '0'
+    }, {
+        href: image.link || '#',
+        target: '_blank',
+        rel: 'noopener noreferrer'
+    });
+
+    // Create hover text
+    const hoverText = createElement('span', {
+        color: '#FFFFFF',
+        fontSize: '2vh',
+        fontWeight: '600',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        marginRight: '1vw' // Space for arrow
+    }, {}, [image.hoverText]);
+
+    // Create arrow image
+    const arrowIcon = createElement('img', {
+        width: '2vh',
+        height: '2vh',
+        verticalAlign: 'middle'
+    }, { src: 'assets/arrow-up-right.png', alt: 'Redirect Arrow' });
+
+    hoverTextContainer.append(hoverText, arrowIcon);
+
+    // Hover event listeners
+    imageWrapper.addEventListener('mouseenter', () => {
+        imageElement.style.border = '0.2vh solid #FFFFFF';
+        overlay.style.opacity = '1';
+        hoverTextContainer.style.opacity = '1';
+        hoverTextContainer.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'; // Subtle hover effect
+    });
+    imageWrapper.addEventListener('mouseleave', () => {
         imageElement.style.border = 'none';
+        overlay.style.opacity = '0';
+        hoverTextContainer.style.opacity = '0';
+        hoverTextContainer.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
     });
 
     let imgContainer = imageElement;
@@ -383,6 +445,8 @@ const gameImages = [
         imageWrapper.appendChild(tag);
     }
 
+    overlay.appendChild(hoverTextContainer);
+    imageWrapper.appendChild(overlay);
     imageWrapper.appendChild(imgContainer);
     return imageWrapper;
 });
@@ -395,13 +459,13 @@ function adjustGamesLayout() {
         gameImagesContainer.style.gap = '4vh';
         gameImagesContainer.style.alignItems = 'center';
         gameImages.forEach(wrapper => {
-            const img = wrapper.querySelector('img');
+            const img = wrapper.querySelector('img:not([alt="Redirect Arrow"])'); // Exclude arrow image
             img.style.width = 'auto';
             img.style.height = 'auto';
             img.style.maxWidth = '100vw';
             img.style.maxHeight = '40vh';
 
-            const tag = wrapper.querySelector('span');
+            const tag = wrapper.querySelector('span:not(.hover-text)');
             if (tag) {
                 tag.style.left = '7vw';
             }
@@ -411,12 +475,12 @@ function adjustGamesLayout() {
         gameImagesContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
         gameImagesContainer.style.gap = '4vw';
         gameImages.forEach(wrapper => {
-            const img = wrapper.querySelector('img');
+            const img = wrapper.querySelector('img:not([alt="Redirect Arrow"])');
             img.style.width = 'auto';
             img.style.height = 'auto';
             img.style.maxWidth = '100%';
 
-            const tag = wrapper.querySelector('span');
+            const tag = wrapper.querySelector('span:not(.hover-text)');
             if (tag) {
                 tag.style.left = '1vw';
             }
