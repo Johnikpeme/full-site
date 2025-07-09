@@ -214,10 +214,7 @@ const nounsHuntLogo = createElement(
     height: "auto",
     display: "block",
   },
-  {
-    src: "assets/Asset 102@2x.png",
-    alt: "Nouns Hunt Logo",
-  }
+  { src: "assets/Asset 102@2x.png", alt: "Nouns Hunt Logo" }
 );
 
 // Add Download Now Button as a link with initial relative sizing
@@ -627,7 +624,7 @@ function updateRankings() {
   headers.append("Content-Type", "application/json");
   headers.append("Origin", window.location.origin);
 
-  const body = JSON.stringify('{"name": "sp_global", "limit":10}');
+  const body = JSON.stringify("{\"name\": \"sp_global\", \"limit\":10}");
 
   const requestOptions = {
     method: "POST",
@@ -649,24 +646,41 @@ function updateRankings() {
         const row = createElement("tr", {});
         const rank = createElement(
           "td",
-          { padding: "1vh", borderBottom: "0.1vh solid #ccc" },
+          { padding: "1vh", borderBottom: "0.1vh solid #ccc", color: "#000000" },
           {},
           [player.rank.toString()]
         );
-        const name = createElement(
+        const nameTd = createElement(
           "td",
-          { padding: "1vh", borderBottom: "0.1vh solid #ccc" },
+          { padding: "1vh", borderBottom: "0.1vh solid #ccc", color: "#000000", display: "flex", alignItems: "center" },
           {},
-          [player.username]
         );
+        const avatarImg = createElement(
+          "img",
+          {
+            width: "30px",
+            height: "30px",
+            borderRadius: "50%",
+            marginRight: "10px",
+            verticalAlign: "middle",
+          },
+          { src: `avatars/${player.avatar}.png`, alt: "Avatar" }
+        );
+        avatarImg.addEventListener("mouseenter", () => {
+          avatarImg.src = `avatars/${player.avatar}_active.png`;
+        });
+        avatarImg.addEventListener("mouseleave", () => {
+          avatarImg.src = `avatars/${player.avatar}.png`;
+        });
+        nameTd.append(avatarImg, document.createTextNode(player.username));
         const score = createElement(
           "td",
-          { padding: "1vh", borderBottom: "0.1vh solid #ccc" },
+          { padding: "1vh", borderBottom: "0.1vh solid #ccc", color: "#000000" },
           {},
           [String(player.score.toString())]
         );
 
-        row.append(rank, name, score);
+        row.append(rank, nameTd, score);
         tbody.append(row);
       });
     })
@@ -687,24 +701,41 @@ function updateRankings() {
         const row = createElement("tr", {});
         const rank = createElement(
           "td",
-          { padding: "1vh", borderBottom: "0.1vh solid #ccc" },
+          { padding: "1vh", borderBottom: "0.1vh solid #ccc", color: "#000000" },
           {},
           [player.rank.toString()]
         );
-        const name = createElement(
+        const nameTd = createElement(
           "td",
-          { padding: "1vh", borderBottom: "0.1vh solid #ccc" },
+          { padding: "1vh", borderBottom: "0.1vh solid #ccc", color: "#000000", display: "flex", alignItems: "center" },
           {},
-          [player.username]
         );
+        const avatarImg = createElement(
+          "img",
+          {
+            width: "30px",
+            height: "30px",
+            borderRadius: "50%",
+            marginRight: "10px",
+            verticalAlign: "middle",
+          },
+          { src: `avatars/${player.avatar}.png`, alt: "Avatar" }
+        );
+        avatarImg.addEventListener("mouseenter", () => {
+          avatarImg.src = `avatars/${player.avatar}_active.png`;
+        });
+        avatarImg.addEventListener("mouseleave", () => {
+          avatarImg.src = `avatars/${player.avatar}.png`;
+        });
+        nameTd.append(avatarImg, document.createTextNode(player.username));
         const score = createElement(
           "td",
-          { padding: "1vh", borderBottom: "0.1vh solid #ccc" },
+          { padding: "1vh", borderBottom: "0.1vh solid #ccc", color: "#000000" },
           {},
           [String(player.score.toString())]
         );
 
-        row.append(rank, name, score);
+        row.append(rank, nameTd, score);
         tbody.append(row);
       });
     })
@@ -1001,11 +1032,7 @@ const socialMedia = [
     src: "youtube.png",
     href: "https://www.youtube.com/channel/UCZuLS7Q8jemturg7B3FpxPg",
   },
-  {
-    platform: "LinkedIn",
-    src: "linkedin.png",
-    href: "https://www.linkedin.com/company/dash-studios-inc/",
-  },
+  { platform: "LinkedIn", src: "linkedin.png", href: "https://www.linkedin.com/company/dash-studios-inc/" },
 ].map((social) => {
   const a = createElement(
     "a",
@@ -1075,3 +1102,4 @@ mainContent.append(
   newsSection
 );
 app.append(header, mainContent, footer);
+
