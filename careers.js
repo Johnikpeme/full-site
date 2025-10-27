@@ -20,7 +20,7 @@ function createElement(tag, styles = {}, attributes = {}, children = []) {
 const styleSheet = document.createElement('style');
 styleSheet.textContent = `
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Arial', sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f5f5f5;
@@ -65,11 +65,220 @@ styleSheet.textContent = `
         font-size: 14px;
         color: #333;
     }
-    
+    .job-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%);
+    }
+    .job-listing {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        border-left: 4px solid #4A90E2;
+    }
+    .job-listing:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    }
+    .job-listing::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #4A90E2, #50C878);
+        transition: transform 0.3s ease;
+    }
+    .job-listing:hover::before {
+        transform: scaleX(1.1);
+    }
+    .job-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        position: relative;
+        z-index: 1;
+    }
+    .job-description {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-bottom: 25px;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+    .job-details {
+        font-size: 14px;
+        color: #6b6b6b;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .job-detail-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .job-detail-item span {
+        font-weight: 500;
+        color: #4A90E2;
+    }
+    .apply-button {
+        background: linear-gradient(90deg, #4A90E2, #50C878);
+        border: none;
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        align-self: flex-start;
+        position: relative;
+        overflow: hidden;
+    }
+    .apply-button:hover {
+        background: linear-gradient(90deg, #357ABD, #3DA65F);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .apply-button::after {
+        content: '→';
+        margin-left: 8px;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+    }
+    .apply-button:hover::after {
+        transform: translateX(5px);
+    }
+    /* Header and Navigation */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vh 3vw;
+        background-color: #000000;
+        border-bottom: 1px solid #333;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 1000;
+    }
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        padding: 20px;
+    }
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 2px 0;
+        transition: all 0.3s ease;
+    }
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    /* Footer */
+    .footer-nav {
+        list-style: none;
+        display: flex;
+        gap: 2vw;
+        padding: 0;
+    }
+    /* Animations */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+    }
+    @keyframes wobble {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(5deg); }
+        75% { transform: rotate(-5deg); }
+        100% { transform: rotate(0deg); }
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
     /* Mobile responsiveness */
     @media (max-width: 768px) {
         .news-article {
             width: 100%; /* One article per row */
+        }
+        .job-container {
+            grid-template-columns: 1fr;
+            padding: 20px;
+        }
+        .job-listing {
+            padding: 20px;
+        }
+        .job-title {
+            font-size: 24px;
+        }
+        .job-description {
+            font-size: 14px;
+        }
+        .apply-button {
+            width: 100%;
+            text-align: center;
+        }
+        .nav-links {
+            display: none;
+        }
+        .nav-links.active {
+            display: flex;
+        }
+        .hamburger {
+            display: flex;
+        }
+        .footer {
+            flex-direction: column;
+            text-align: center;
+        }
+        .footer-nav {
+            flex-direction: column;
+            gap: 1vh;
+        }
+        .social-links {
+            flex-direction: column;
         }
     }
 `;
@@ -229,7 +438,7 @@ const getInTouch = createElement('button', {
     fontSize: '2.2vh',
     display: 'flex',
     alignItems: 'center',
-    marginRight: '2vw', // Default for desktop
+    marginRight: '2vw',
     animation: 'pulse 2s infinite',
     transition: 'transform 0.3s ease, background-color 0.3s ease'
 }, {}, [
@@ -245,12 +454,10 @@ getInTouch.addEventListener('click', () => {
 // Function to set responsive properties for Get in Touch button
 function setGetInTouchStyles() {
     if (window.innerWidth <= 768) {
-        // Mobile properties
         getInTouch.style.marginRight = '12vw';
-        getInTouch.style.fontSize = '1.8vh'; // Slightly smaller for mobile
-        getInTouch.style.padding = '1.5vh 3vw'; // Adjust padding for mobile
+        getInTouch.style.fontSize = '1.8vh';
+        getInTouch.style.padding = '1.5vh 3vw';
     } else {
-        // Desktop properties
         getInTouch.style.marginRight = '2vw';
         getInTouch.style.fontSize = '2.2vh';
         getInTouch.style.padding = '1vh 2vw';
@@ -275,7 +482,7 @@ getInTouch.addEventListener('mouseleave', () => {
 
 // Hamburger Menu
 const hamburger = createElement('div', {
-    marginLeft: '-1vw' // Moves it slightly to the left
+    marginLeft: '-1vw'
 });
 hamburger.className = 'hamburger';
 const line1 = createElement('span', {});
@@ -291,13 +498,13 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
 });
 
-// Open Roles Section (No Hero Picture)
+// Open Roles Section
 const openRoles = createElement('section', {
     backgroundColor: '#000000',
     width: '100%',
-    padding: '100px 20px', // Increased padding to center it vertically
+    padding: '120px 20px',
     textAlign: 'center',
-    minHeight: '100vh', // Full height to fill the viewport
+    minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -305,22 +512,50 @@ const openRoles = createElement('section', {
 });
 
 const rolesTitle = createElement('h2', {
-    fontSize: '48px', // Bigger than before (was 36px)
-    fontWeight: '700',
+    fontSize: '56px',
+    fontWeight: '800',
     color: '#FFFFFF',
-    marginBottom: '40px',
-    textTransform: 'uppercase' // Makes it "OPEN ROLES"
+    marginBottom: '50px',
+    textTransform: 'uppercase',
+    letterSpacing: '2px',
+    background: 'linear-gradient(90deg, #4A90E2, #50C878)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent'
 }, {}, ['Open Roles']);
 
-const noRolesMessage = createElement('p', {
-    fontSize: '18px',
-    color: '#FFFFFF',
-    maxWidth: '600px',
-    margin: '0 auto',
-    lineHeight: '1.5'
-}, {}, ['We don’t have any open roles at this time. Try again later.']);
+// Job Listing
+const jobContainer = createElement('div', { className: 'job-container' });
 
-openRoles.append(rolesTitle, noRolesMessage);
+const jobListing = createElement('div', { className: 'job-listing' });
+const jobTitle = createElement('h3', { className: 'job-title' }, {}, ['Backend Developer (Nakama + Go)']);
+const jobDescription = createElement('p', { className: 'job-description' }, {}, [
+    'We’re seeking a skilled Backend Engineer to own our Nakama + Go backend, focusing on troubleshooting, performance optimization, and scaling for production. You’ll work closely with our team to stabilize the server, enhance gameplay, and ensure seamless real-time player experiences.'
+]);
+
+// Add job details for more context
+const jobDetails = createElement('div', { className: 'job-details' }, {}, [
+    createElement('div', { className: 'job-detail-item' }, {}, [
+        createElement('span', {}, {}, ['Location:']),
+        ' Remote'
+    ]),
+    createElement('div', { className: 'job-detail-item' }, {}, [
+        createElement('span', {}, {}, ['Type:']),
+        ' Full-time'
+    ]),
+    createElement('div', { className: 'job-detail-item' }, {}, [
+        createElement('span', {}, {}, ['Experience:']),
+        ' 3+ years'
+    ])
+]);
+
+const applyButton = createElement('a', { className: 'apply-button' }, { 
+    href: 'https://forms.gle/vChjrFkPTkNV29fZ9', 
+    target: '_blank' 
+}, ['Apply Now']);
+
+jobListing.append(jobTitle, jobDescription, jobDetails, applyButton);
+jobContainer.append(jobListing);
+openRoles.append(rolesTitle, jobContainer);
 fadeInOnScroll(openRoles);
 
 // Footer (Black Background)
