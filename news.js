@@ -65,11 +65,70 @@ styleSheet.textContent = `
         font-size: 14px;
         color: #333;
     }
-    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        padding: 20px;
+    }
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 2px 0;
+        transition: all 0.3s ease;
+    }
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    /* Animations */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+    }
+    @keyframes wobble {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(5deg); }
+        75% { transform: rotate(-5deg); }
+        100% { transform: rotate(0deg); }
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
     /* Mobile responsiveness */
     @media (max-width: 768px) {
         .news-article {
             width: 100%; /* One article per row */
+        }
+        .nav-links {
+            display: none;
+        }
+        .nav-links.active {
+            display: flex;
+        }
+        .hamburger {
+            display: flex;
         }
     }
 `;
@@ -156,7 +215,7 @@ const fadeInOnScroll = (element) => {
     observer.observe(element);
 };
 
-// Header (Same as Previous Pages)
+// Header (Sticky, Black Background)
 const header = createElement('header', {
     display: 'flex',
     justifyContent: 'space-between',
@@ -239,7 +298,7 @@ const getInTouch = createElement('button', {
     fontSize: '2.2vh',
     display: 'flex',
     alignItems: 'center',
-    marginRight: '2vw', // Default for desktop
+    marginRight: '2vw',
     animation: 'pulse 2s infinite',
     transition: 'transform 0.3s ease, background-color 0.3s ease'
 }, {}, [
@@ -255,12 +314,10 @@ getInTouch.addEventListener('click', () => {
 // Function to set responsive properties for Get in Touch button
 function setGetInTouchStyles() {
     if (window.innerWidth <= 768) {
-        // Mobile properties
         getInTouch.style.marginRight = '12vw';
-        getInTouch.style.fontSize = '1.8vh'; // Slightly smaller for mobile
-        getInTouch.style.padding = '1.5vh 3vw'; // Adjust padding for mobile
+        getInTouch.style.fontSize = '1.8vh';
+        getInTouch.style.padding = '1.5vh 3vw';
     } else {
-        // Desktop properties
         getInTouch.style.marginRight = '2vw';
         getInTouch.style.fontSize = '2.2vh';
         getInTouch.style.padding = '1vh 2vw';
@@ -302,7 +359,7 @@ hamburger.addEventListener('click', () => {
 const newsSection = createElement('section', {
     backgroundColor: '#FFFFFF',
     width: '100%',
-    padding: '100px 20px', // Extra padding to account for fixed header
+    padding: '100px 20px',
     textAlign: 'center'
 });
 
@@ -315,8 +372,15 @@ const newsTitle = createElement('h2', {
     textTransform: 'uppercase'
 }, {}, ['News/Events']);
 
-// News Articles Data (5 articles)
+// News Articles Data (Updated with new article at the top)
 const newsArticles = [
+    { 
+        img: 'nouns-attack2.jpg', 
+        title: 'Nouns Attack - Gamathon 2025', 
+        date: 'October 27, 2025', 
+        desc: 'Dash Studios unveiled their second title, Nouns Attack, a thrilling new entry in the Nouns franchise, at Africacomicade’s Gamathon 2025. The game secured 2nd place in the Ark Pitch (Mobile Category), showcasing its innovative gameplay and promising future.', 
+        link: 'https://www.linkedin.com/posts/john-i-02b82397_i-had-the-pleasure-of-attending-the-sixth-activity-7383849006432665600-7MP9?utm_source=share&utm_medium=member_desktop&rcm=ACoAABSWxmMBGPEyCt8_aF0B5A1WNlpxBkEKxZk' 
+    },
     { img: 'news-main.jpg', title: 'Nouns Hunt v2.0 Out Now!', date: 'April 11, 2025', desc: 'Nouns Hunt v2.0 releases with new updates like Public Multiplayer and AI Powered Database. Enjoy Nouns Hunt like never before.', link: 'https://medium.com/@dashgamingstudios/nouns-hunt-2-0-full-release-unleashes-global-multiplayer-and-game-changing-upgrades-eec11c0702cc' },
     { img: 'news-3.jpg', title: 'Nouns Hunt Release Trailer', date: 'April 11, 2025', desc: 'Watch the official trailer for Nouns Hunt’s big update.', link: 'https://example.com/news3' },
     { img: 'slide10.jpg', title: 'Dev Insights: Building Nouns Hunt', date: 'February 28, 2025', desc: 'Behind-the-scenes look at creating our flagship game.', link: 'https://example.com/news5' },
@@ -339,7 +403,7 @@ function renderNews() {
     });
 
     const screenWidth = window.innerWidth;
-    const isMobile = screenWidth < 768; // Mobile: <768px (1 article per row), Desktop: 2 per row
+    const isMobile = screenWidth < 768;
 
     for (let i = 0; i < newsArticles.length; i++) {
         const article = newsArticles[i];
@@ -422,11 +486,7 @@ function renderNews() {
 
 // Initial render
 renderNews();
-window.addEventListener('resize', renderNews); // Re-render on window resize
-
-fadeInOnScroll(newsSection);
-
-
+window.addEventListener('resize', renderNews);
 
 // Footer (Black Background)
 const isMobile = window.innerWidth <= 768;

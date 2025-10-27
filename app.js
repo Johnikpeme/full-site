@@ -622,7 +622,7 @@ const smallerArticles = createElement('div', {
 });
 
 const smallArticlesData = [
-    { title: 'Nouns Hunt Release Trailer', tag: 'VIDEO', tagIcon: '🎥', src: 'news-3-2.jpg', link: 'https://example.com/news-3' },
+    { title: 'Nouns Attack - Gamathon 2025', tag: 'NEWS', tagIcon: '📰', src: 'nouns-attack2.jpg', link: 'https://www.linkedin.com/posts/john-i-02b82397_i-had-the-pleasure-of-attending-the-sixth-activity-7383849006432665600-7MP9?utm_source=share&utm_medium=member_desktop&rcm=ACoAABSWxmMBGPEyCt8_aF0B5A1WNlpxBkEKxZk' },
     { title: '/Dev Insights: Building Nouns Hunt', tag: 'EXCL: DASH STUDIOS', tagIcon: '🧠', src: 'news-1.jpeg', link: 'https://example.com/news-1' },
     { title: 'UC Launch: Dash Studios', tag: 'NEWS', tagIcon: '📰', src: 'news-4.jpg', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7221409228941328386' },
     { title: 'B-School Disrupt SF 2024', tag: 'NEWS', tagIcon: '📰', src: 'news-2.jpg', link: 'https://www.linkedin.com/feed/update/urn:li:activity:7261874551175684096' }
