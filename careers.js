@@ -540,7 +540,7 @@ const jobDetails = createElement('div', { className: 'job-details' }, {}, [
     ]),
     createElement('div', { className: 'job-detail-item' }, {}, [
         createElement('span', {}, {}, ['Type:']),
-        ' Full-time'
+        ' 3-Month Contract'
     ]),
     createElement('div', { className: 'job-detail-item' }, {}, [
         createElement('span', {}, {}, ['Experience:']),
