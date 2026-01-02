@@ -1,24 +1,2479 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dash Studios Inc.</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-</head>
-<body>
-    <div id="app"></div>
-    <script src="app.js"></script>
-    <script>
-        // Remove '.html' from the URL on page load, special case for index.html
-        const currentPath = window.location.pathname;
-        if (currentPath === '/index.html') {
-            window.history.replaceState(null, null, '/');
-        } else if (currentPath.endsWith('.html')) {
-            window.history.replaceState(null, null, currentPath.replace('.html', ''));
+<!-- Last Published: Tue Nov 11 2025 16:05:23 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="www.dashstudios.com" data-wf-page="68e6392b59d31f870cef57bc" data-wf-site="68e6392a59d31f870cef56f9" lang="en">
+<!-- Mirrored from www.dashstudios.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Dec 2025 08:28:57 GMT -->
+<head><meta charset="utf-8"/><title>Dash Studios – Telling African Stories Through Immersive Games</title><meta content="Dash Studios – Telling African Stories Through Games" property="og:title"/><meta content="We create immersive games inspired by African culture, history, and imagination — crafted for players around the world." property="og:description"/><meta content="https://cdn.prod.website-files.com/68e6392a59d31f870cef56f9/690a1c478363d29d3302f121_tesoro-og.jpg" property="og:image"/><meta content="Dash Studios – Immersive Games Rooted in African Heritage" property="twitter:title"/><meta content="We are a visionary game studio dedicated to crafting deep, narrative-driven experiences that celebrate African cultures, myths, and untold stories." property="twitter:description"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/css/tesoroxpinc.webflow.shared.4730546a8.min.css" rel="stylesheet" type="text/css"/><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/68e8fb019575299c0f8ece2f_tesoro_favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/68e8fae10e2b65da9f6fc6eb_tesoro_webclip.png" rel="apple-touch-icon"/><link href="index.html" rel="canonical"/><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Dash Studios, Inc.",
+  "description": "Telling African Stories Through Immersive Games. A visionary studio crafting deep narrative experiences rooted in African culture, history, and imagination.",
+  "url": "/",
+  "inLanguage": "en",
+  "sameAs": [],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Our Games",
+      "description": "Explore our portfolio of immersive games that bring African stories, myths, and histories to life through engaging gameplay and rich worlds.",
+      "url": "/our-games"
+    },
+    {
+      "@type": "Offer",
+      "name": "Development",
+      "description": "Learn about our creative process, from research and storytelling to cutting‑edge game design and authentic cultural representation.",
+      "url": "/development"
+    },
+    {
+      "@type": "Offer",
+      "name": "Community",
+      "description": "Join a growing community of players, storytellers, and supporters passionate about African narratives in gaming.",
+      "url": "/community"
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "General Inquiry"
+  }
+}
+</script><!-- Lenis -->
+<link rel="stylesheet" href="./cdn.jsdelivr.net/npm/lenis%401.2.3/dist/lenis.css">
+
+<style>
+@media (prefers-reduced-motion: no-preference) {
+  .transition_wrap {
+    display: flex;
+  }
+}
+</style></head><body><div class="page_wrap"><div class="u-position-fixed"><div class="w-embed"><style>
+:root {
+  --grid-breakout: [full-start] minmax(0, 1fr) [content-start] repeat(var(--site--column-count), minmax(0, var(--site--column-width))) [content-end] minmax(0, 1fr) [full-end];
+  --grid-breakout-single: [full-start] minmax(0, 1fr) [content-start] minmax(0, calc(100% - var(--site--margin) * 2)) [content-end] minmax(0, 1fr) [full-end];
+}
+::before, ::after {
+	box-sizing: border-box;
+}
+.w-embed:before, .w-embed:after,
+.w-richtext:before, .w-richtext:after {
+	content: unset;
+}
+html {
+	background-color: var(--_theme---background);
+}
+button {
+	background-color: unset;
+	padding: unset;
+	text-align: inherit;
+}
+button:not(:disabled) {
+	cursor: pointer;
+}
+video {
+	width: 100%;
+	object-fit: cover;
+}
+/* remove padding of empty element */
+.wf-empty {
+	padding: 0;
+}
+svg {
+	max-width: 100%;
+}
+@media (prefers-color-scheme: light) {
+	option { color: black; }
+}
+img::selection {
+	background: transparent;
+}
+/* Typography */
+body {
+	text-transform: var(--_text-style---text-transform);
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+/* Clear Defaults */
+a:not([class]) {
+	text-decoration: underline;
+}
+h1,h2,h3,h4,h5,h6,p,blockquote,label {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	letter-spacing: inherit;
+	text-transform: inherit;
+	text-wrap: inherit;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+select:has(option[value=""]:checked) {
+	color: color-mix(in lab, currentcolor 60%, transparent)
+}
+/* Selection Color */
+::selection {
+	background-color: var(--_theme---selection--background);
+	color: var(--_theme---selection--text);
+}
+/* Margin Trim */
+:is(.u-margin-trim,.u-rich-text) > :not(:not(.w-condition-invisible,.u-cover-absolute,.u-ignore-trim) ~ :not(.w-condition-invisible,.u-cover-absolute,.u-ignore-trim)),
+:is(.u-margin-trim,.u-rich-text) > :not(:not(.w-condition-invisible,.u-cover-absolute,.u-ignore-trim) ~ :not(.w-condition-invisible,.u-cover-absolute,.u-ignore-trim)).u-display-contents > :first-child {
+	margin-top: 0;
+}
+:is(.u-margin-trim,.u-rich-text) > :not(:has(~ :not(.w-condition-invisible,.u-cover-absolute,.u-ignore-trim))),
+:is(.u-margin-trim,.u-rich-text) > :not(:has(~ :not(.w-condition-invisible,.u-cover-absolute,.u-ignore-trim))).u-display-contents > :last-child {
+	margin-bottom: 0;
+}
+/* Line Height Trim */
+:is(h1,h2,h3,h4,h5,h6,p):not(.u-text-trim-off,:has([class*="u-text-style-"]))::before,
+[class*="u-text-style-"]:not(.u-text-trim-off,:has(h1,h2,h3,h4,h5,h6,p))::before {
+	content: "";
+	display: table;
+	margin-bottom: calc(-0.5lh + var(--_text-style---trim-top));
+}
+:is(h1,h2,h3,h4,h5,h6,p):not(.u-text-trim-off,:has([class*="u-text-style-"]))::after,
+[class*="u-text-style-"]:not(.u-text-trim-off,:has(h1,h2,h3,h4,h5,h6,p))::after {
+	content: "";
+	display: table;
+	margin-bottom: calc(-0.5lh + var(--_text-style---trim-bottom));
+}
+/* Rich Text Links */
+.w-richtext a {
+	position: relative;
+	z-index: 4;
+}
+/* Line Clamp */
+.u-line-clamp-1, .u-line-clamp-2, .u-line-clamp-3, .u-line-clamp-4 {
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.u-line-clamp-2 { -webkit-line-clamp: 2; }
+.u-line-clamp-3 { -webkit-line-clamp: 3; }
+.u-line-clamp-4 { -webkit-line-clamp: 4; }
+/* Child Contain */
+.u-child-contain > * {
+	width: 100%;
+	max-width: inherit !important;
+  margin-inline: 0 !important;
+	margin-top: 0 !important;
+}
+/* Hide */
+.u-hide-if-empty:empty,
+.u-hide-if-empty:not(:has(> :not(.w-condition-invisible))),
+.u-hide-if-empty-cms:not(:has(.w-dyn-item)),
+.u-embed-js,
+.u-embed-css {
+	display: none !important;
+}
+/* Focus State */
+a, button, :where([tabindex]), [data-outline], input {
+	outline-offset: var(--focus--offset-outer);
+}
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible,
+input:focus-visible {
+	outline-color: var(--_theme---text);
+	outline-width: var(--focus--width);
+	outline-style: solid;
+}
+/* Disabled */
+[data-button]:has(button:disabled) {
+	opacity: 0.5;
+  pointer-events: none;
+}
+/* Global / Clickable Component */
+.wf-design-mode .clickable_wrap {
+	z-index: 0;
+}
+.clickable_wrap a[href="#"] {
+	display: none;
+}
+.clickable_wrap a[href="#"] ~ button {
+	display: block;
+}
+/* Responsive Above */
+@container threshold-large (width >= 62em) {
+	.u-order-unset-above { order: unset !important; }
+	.u-all-unset-above { all: unset !important; }
+	.u-grid-below { display: flex !important; }
+}
+@container threshold-medium (width >= 48em) {
+	.u-order-unset-above { order: unset !important; }
+	.u-all-unset-above { all: unset !important; }
+	.u-grid-below { display: flex !important; }
+}
+@container threshold-small (width >= 30em) {
+	.u-order-unset-above { order: unset !important; }
+	.u-all-unset-above { all: unset !important; }
+	.u-grid-below { display: flex !important; }
+}
+/* Responsive Below */
+@container threshold-large (width < 62em) {
+	.u-order-unset-below { order: unset !important; }
+	.u-all-unset-below { all: unset !important; }
+	.u-grid-above { display: flex !important; }
+}
+@container threshold-medium (width < 48em) {
+	.u-order-unset-below { order: unset !important; }
+	.u-all-unset-below { all: unset !important; }
+	.u-grid-above { display: flex !important; }
+}
+@container threshold-small (width < 30em) {
+	.u-order-unset-below { order: unset !important; }
+	.u-all-unset-below { all: unset !important; }
+	.u-grid-above { display: flex !important; }
+}
+/* State Manager */
+[data-state] { --_state---true: 1; --_state---false: 0; }
+.is-active,
+[data-state~="checked"]:is(:checked, :has(:checked)),
+[data-state~="current"]:is(.w--current, :has(.w--current)),
+[data-state~="open"]:is(.w--open, :has(.w--open)),
+[data-state~="pressed"]:is([aria-pressed="true"], :has([aria-pressed="true"])),
+[data-state~="expanded"]:is([aria-expanded="true"], :has([aria-expanded="true"])),
+[data-state~="external"]:is([target="_blank"], :has([target="_blank"])) { 
+	--_state---true: 0; --_state---false: 1;
+}
+.wf-design-mode [data-trigger~="preview"],
+[data-trigger~="focus"]:is(:focus-visible, :has(:focus-visible)),
+[data-trigger~="group"]:has([data-trigger~="focus-other"]:focus-visible, [data-trigger~="focus-other"] :focus-visible)
+  [data-trigger~="focus-other"]:not(:focus-visible, :has(:focus-visible)) {
+	--_trigger---on: 0; --_trigger---off: 1;
+}
+@media (hover: hover) {
+	[data-trigger~="hover"]:hover,
+  [data-trigger~="hover-if-clickable"]:has(.clickable_wrap:not(.w-condition-invisible)):hover,
+	[data-trigger~="group"]:has([data-trigger~="hover-other"]:hover) [data-trigger~="hover-other"]:not(:hover) { 
+		--_trigger---on: 0; --_trigger---off: 1;
+	}
+	[data-trigger~="hover-other"]:hover { --_trigger---on: 1 !important; --_trigger---off: 0 !important; }
+}
+@media (hover: none) {
+  [data-trigger~="mobile"] { --_trigger---on: 0; --_trigger---off: 1; }
+}
+/* Slot Styler */
+[data-slot] > .w-dyn-list,
+[data-slot] > .w-dyn-list > *,
+[data-slot] > .w-dyn-list > * > *,
+[data-slot] > .u-display-contents > .w-dyn-list,
+[data-slot] > .u-display-contents > .w-dyn-list > *,
+[data-slot] > .u-display-contents > .w-dyn-list > * > *,
+[data-slot] > .u-display-contents > .u-display-contents > .w-dyn-list,
+[data-slot] > .u-display-contents > .u-display-contents > .w-dyn-list > *,
+[data-slot] > .u-display-contents > .u-display-contents > .w-dyn-list > * > * {
+  display: contents;
+}
+
+/* Gradient Accent */
+.u-heading-accent strong,
+.u-heading-accent b {
+  background: linear-gradient(45deg, var(--swatch--green), var(--swatch--gold), var(--swatch--coral));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-animation: GradientAnimation 5s ease infinite;
+  -moz-animation: GradientAnimation 5s ease infinite;
+  animation: GradientAnimation 5s ease infinite;
+}
+
+/* Gradient Background - add your data attribute name */
+[data-gradient-bg] {
+  background: linear-gradient(300deg, var(--swatch--green), var(--swatch--gold), var(--swatch--coral));
+  background-size: 180% 180%;
+  -webkit-animation: GradientAnimation 10s ease infinite;
+  -moz-animation: GradientAnimation 10s ease infinite;
+  animation: GradientAnimation 10s ease infinite;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .u-heading-accent strong,
+  .u-heading-accent b {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    background-size: 100% 100%;
+  }
+  
+  [data-gradient-bg] {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    background-size: 100% 100%;
+  }
+}
+
+@-webkit-keyframes GradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@-moz-keyframes GradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes GradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Shadow */
+[data-shadow] {
+  box-shadow: 
+    rgb(from var(--_theme---shadow) r g b / 0.02) 0 0.25em 0.5em 0, 
+    rgb(from var(--_theme---shadow) r g b / 0.03) 0 0.5em 0.75em 0, 
+    rgb(from var(--_theme---shadow) r g b / 0.04) 0 0.75em 1em 0, 
+    rgb(from var(--_theme---shadow) r g b / 0.04) 0 1em 1.5em 0;
+}
+
+/* Hide Scrollbar */
+body ::-webkit-scrollbar{display: none;} /* Chrome, Safari, Opera */
+body {-ms-overflow-style: none;} /* IE & Edge */
+html {scrollbar-width: none;} /* Firefox */
+
+</style></div></div><div class="guide_wrap"><div class="w-embed"><style>
+html.wf-design-mode .guide_wrap {
+	display: block;
+}
+.guide_layout {
+	counter-reset: gridguides;
+}
+.guide_layout > div::before {
+  counter-increment: gridguides;
+  content: counter(gridguides);
+}
+</style></div><div data-padding-bottom="none" data-padding-top="none" class="guide_contain u-container"><div class="guide_layout"><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div><div class="guide_column"></div></div></div></div><div data-wf--nav--theme="inherit" class="nav_component"><div class="u-embed-css w-embed"><style>
+@container (min-width: 40em) {
+	.nav_desktop_wrap { display: block; }
+	.nav_desktop_wrap:not(.w-condition-invisible) ~ .nav_mobile_wrap, .nav_desktop_wrap:not(.w-condition-invisible) ~ .nav_menu_backdrop { display: none; }
+}
+/* Dynamic Tooltip */
+body:has([data-tooltip]:hover) .tooltip { 
+  opacity: 1; 
+}
+
+.product_visual.u-card-green {
+  padding: 0;
+  overflow: visible; /* Change to visible so floating image isn't cut off */
+}
+
+/* Only the background image - direct child */
+.product_visual.u-card-green > .c-image-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+</style></div><div class="u-embed-js w-embed w-script"><script>
+  document.querySelectorAll(".nav_skip_wrap").forEach(function (link) {
+    const target = document.querySelector("main");
+    if (!target) return;
+    link.addEventListener("click", function () {
+      target.setAttribute("tabindex", "-1");
+      target.focus();
+    });
+  });
+</script></div><div class="u-embed-js w-embed w-script"><script>
+document.addEventListener('DOMContentLoaded', function() {
+  (function () {
+    const CONFIG = {
+      inColor: 'var(--swatch--light-base)',
+      outColor: 'var(--_theme---text)',
+      staggerDelay: 0.02,
+      duration: 0.15,
+      phaseGap: 0,
+      staggerFrom: 'start',
+      loopOnHover: false
+    };
+    const elements = document.querySelectorAll('[data-stagger-cta]');
+    if (!elements.length) return;
+    const gsap = window.gsap;
+    const mm = gsap.matchMedia();
+    mm.add('(hover: hover) and (pointer: fine)', () => {
+      const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')
+        .matches ?? false;
+      const staggerConfig = { each: CONFIG.staggerDelay, from: CONFIG.staggerFrom };
+      elements.forEach((el) => {
+        if (el.dataset.scriptInitialized) return;
+        el.dataset.scriptInitialized = 'true';
+        // Get custom inColor from attribute or use default
+        const inColor = el.dataset.inColor || CONFIG.inColor;
+        const split = new window.SplitText(el, { type: 'chars', charsClass: 'char' });
+        gsap.set(split.chars, {
+          clearProps: 'opacity,backgroundImage,backgroundClip,webkitTextFillColor'
+        });
+        // Reduced motion: simple color change
+        if (prefersReducedMotion) {
+          el.addEventListener('mouseenter', () => {
+            split.chars.forEach(char => char.style.color = inColor);
+          });
+          return;
         }
-    </script>
-</body>
+        // Full animation timeline
+        const timeline = gsap.timeline({ paused: true })
+          .to(split.chars, {
+            color: inColor,
+            duration: CONFIG.duration,
+            ease: 'none',
+            stagger: staggerConfig
+          })
+          .to(split.chars, {
+            color: CONFIG.outColor,
+            duration: CONFIG.duration,
+            ease: 'none',
+            stagger: staggerConfig
+          }, `>+${CONFIG.phaseGap}`);
+        if (CONFIG.loopOnHover) {
+          timeline.repeat(-1).repeatDelay(CONFIG.phaseGap);
+        }
+        let leaveAnimation = null;
+        el.addEventListener('mouseenter', () => {
+          leaveAnimation?.kill();
+          leaveAnimation = null;
+          CONFIG.loopOnHover ? timeline.play(0) : timeline.restart(true);
+        });
+        // Cleanup observer
+        if (window.MutationObserver) {
+          const observer = new MutationObserver(() => {
+            if (!document.body.contains(el)) {
+              timeline.kill();
+              leaveAnimation?.kill();
+              observer.disconnect();
+            }
+          });
+          observer.observe(document.body, { childList: true, subtree: true });
+        }
+      });
+      return () => {
+        elements.forEach(el => delete el.dataset.scriptInitialized);
+      };
+    });
+  })();
+});
+</script></div><div class="u-embed-js w-embed w-script"><script>
+document.addEventListener('DOMContentLoaded', function() {
+  (function () {
+    const CONFIG = {
+      inColor: 'var(--_theme---heading-accent)',
+      outColor: 'var(--_theme---nav--link-hover)',
+      originalColor: 'var(--_theme---text)',
+      staggerDelay: 0.02,
+      duration: 0.15,
+      phaseGap: 0,
+      staggerFrom: 'start',
+      loopOnHover: false
+    };
+    // Get all elements and filter out those inside nav_mobile_wrap
+    const allElements = document.querySelectorAll('[data-stagger-hover]');
+    const elements = Array.from(allElements).filter(el => !el.closest('.nav_mobile_wrap'));
+    if (!elements.length) return;
+    // Only run on devices with hover capability (non-touch)
+    const mm = window.gsap.matchMedia();
+    mm.add('(hover: hover) and (pointer: fine)', () => {
+      const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')
+        .matches ?? false;
+      const staggerConfig = {
+        each: CONFIG.staggerDelay,
+        from: CONFIG.staggerFrom
+      };
+      function animateNavLinks(navLinksBase, show) {
+        if (!navLinksBase) return;
+        if (show) {
+          window.gsap.set(navLinksBase, { visibility: 'visible' });
+          window.gsap.to(navLinksBase, { yPercent: 0, duration: 0.3, ease: 'power2.out' });
+        } else {
+          window.gsap.to(navLinksBase, {
+            yPercent: 100,
+            duration: 0.3,
+            ease: 'power2.in',
+            onComplete: () => window.gsap.set(navLinksBase, { visibility: 'hidden' })
+          });
+        }
+      }
+      function setupReducedMotion(el, split, navLinksBase) {
+        const setColor = (color) => split.chars.forEach(char => char.style.color = color);
+        const setNavVisibility = (visible) => {
+          if (!navLinksBase) return;
+          navLinksBase.style.visibility = visible ? 'visible' : 'hidden';
+          navLinksBase.style.transform = visible ? 'translateY(0)' : 'translateY(100%)';
+        };
+        el.addEventListener('mouseenter', () => {
+          setColor(CONFIG.outColor);
+          setNavVisibility(true);
+        });
+        el.addEventListener('mouseleave', () => {
+          setColor(CONFIG.originalColor);
+          setNavVisibility(false);
+        });
+      }
+      function setupFullAnimation(el, split, navLinksBase, timeline) {
+        let leaveAnimation = null;
+        el.addEventListener('mouseenter', () => {
+          leaveAnimation?.kill();
+          leaveAnimation = null;
+          animateNavLinks(navLinksBase, true);
+          CONFIG.loopOnHover ? timeline.play(0) : timeline.restart(true);
+        });
+        el.addEventListener('mouseleave', () => {
+          timeline.pause();
+          leaveAnimation = window.gsap.to(split.chars, {
+            color: CONFIG.originalColor,
+            duration: CONFIG.duration,
+            ease: 'none',
+            stagger: staggerConfig
+          });
+          animateNavLinks(navLinksBase, false);
+        });
+        return () => {
+          timeline.kill();
+          leaveAnimation?.kill();
+        };
+      }
+      function setupCleanup(el, cleanup) {
+        if (!window.MutationObserver) return;
+        const observer = new MutationObserver(() => {
+          if (!document.body.contains(el)) {
+            cleanup();
+            observer.disconnect();
+          }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      }
+      elements.forEach((el) => {
+        if (el.dataset.scriptInitialized) return;
+        el.dataset.scriptInitialized = 'true';
+        const navLinksBase = el.querySelector('[data-nav-links-base]');
+        const split = new window.SplitText(el, { type: 'chars', charsClass: 'char' });
+        window.gsap.set(split.chars, {
+          clearProps: 'opacity,backgroundImage,backgroundClip,webkitTextFillColor',
+          color: CONFIG.originalColor // Set initial color
+        });
+        if (navLinksBase) {
+          window.gsap.set(navLinksBase, { visibility: 'hidden', yPercent: 100 });
+        }
+        if (prefersReducedMotion) {
+          setupReducedMotion(el, split, navLinksBase);
+          return;
+        }
+        const timeline = window.gsap.timeline({ paused: true })
+          .to(split.chars, {
+            color: CONFIG.inColor,
+            duration: CONFIG.duration,
+            ease: 'none',
+            stagger: staggerConfig
+          })
+          .to(split.chars, {
+            color: CONFIG.outColor,
+            duration: CONFIG.duration,
+            ease: 'none',
+            stagger: staggerConfig
+          }, `>+${CONFIG.phaseGap}`);
+        if (CONFIG.loopOnHover) {
+          timeline.repeat(-1).repeatDelay(CONFIG.phaseGap);
+        }
+        const cleanup = setupFullAnimation(el, split, navLinksBase, timeline);
+        setupCleanup(el, cleanup);
+      });
+      return () => {
+        // Cleanup function called when media query no longer matches
+        elements.forEach(el => {
+          if (el.dataset.scriptInitialized) {
+            delete el.dataset.scriptInitialized;
+          }
+        });
+      };
+    });
+  })();
+});
+</script></div><div class="u-embed-js w-embed w-script"><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".nav_mobile_wrap").forEach((component) => {
+      if (component.dataset.scriptInitialized) return;
+      component.dataset.scriptInitialized = "true";
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isTabletOrBelow = window.matchMedia('(max-width: 1024px)').matches;
+      const toggleTriggers = document.querySelectorAll('[data-menu-toggle]');
+
+      toggleTriggers.forEach(trigger => {
+        const targetSelector = trigger.getAttribute('data-menu-toggle') || '[data-toggle-target]';
+        const target = document.querySelector(targetSelector);
+        if (!target) return;
+
+        const menuItems = target.querySelectorAll('[data-menu-item]');
+        const menuBase = target.querySelectorAll('[data-menu-base]');
+        let isOpen = false;
+
+        const tl = gsap.timeline({ paused: true });
+
+        if (prefersReducedMotion) {
+          tl.to(target, {
+            autoAlpha: 1,
+            duration: 0.2
+          });
+          if (menuItems.length > 0) {
+            tl.to(menuItems, {
+              opacity: 1,
+              duration: 0.15,
+              stagger: 0.03
+            }, 0);
+          }
+        } else {
+          tl.set(target, {
+            visibility: 'visible',
+          });
+          tl.from(target, {
+            autoAlpha: 0,
+            duration: 0.2,
+            ease: "none"
+          });
+          tl.fromTo(menuBase, {
+            clipPath: "polygon(100% 0, 100% 0, 100% 0, 50% 0, 0 0, 0 0)"
+          }, {
+            clipPath: "polygon(100% 0, 100% 50%, 85% 85%, 40% 100%, 0 85%, 0 0)",
+            duration: 0.85,
+            ease: "expo.out"
+          });
+          if (menuItems.length > 0) {
+            tl.from(menuItems, {
+              opacity: 0,
+              x: -20,
+              stagger: 0.08,
+              duration: 0.65,
+              ease: "expo.out"
+            }, "<+25%");
+          }
+        }
+
+        gsap.set(target, { autoAlpha: 0 });
+
+        // Click handler
+        trigger.addEventListener('click', () => {
+          if (isOpen) {
+            tl.timeScale(1.5);
+            tl.reverse();
+            lenis.start(); // Re-enable scrolling
+          } else {
+            tl.timeScale(1);
+            tl.play();
+            lenis.stop(); // Disable scrolling
+          }
+          isOpen = !isOpen;
+          trigger.setAttribute('aria-expanded', isOpen);
+          trigger.classList.toggle('is-active', isOpen);
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && isOpen) {
+            tl.timeScale(1.5);
+            tl.reverse();
+            lenis.start(); // Re-enable scrolling
+            isOpen = false;
+            trigger.setAttribute('aria-expanded', false);
+            trigger.classList.remove('is-active');
+          }
+        });
+
+        const backdrop = target.querySelector('[data-menu-backdrop]');
+        if (backdrop) {
+          backdrop.addEventListener('click', () => {
+            if (isOpen) {
+              tl.timeScale(1.5);
+              tl.reverse();
+              lenis.start(); // Re-enable scrolling
+              isOpen = false;
+              trigger.setAttribute('aria-expanded', false);
+              trigger.classList.remove('is-active');
+            }
+          });
+        }
+      });
+
+    });
+  });
+</script></div><div class="u-embed-js w-embed w-script"><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".nav_component").forEach((component) => {
+      if (component.dataset.scriptInitialized) return;
+      component.dataset.scriptInitialized = "true";
+      function initDynamicCustomTextCursor() {
+        let cursorItem = document.querySelector(".tooltip");
+        let cursorParagraph = cursorItem.querySelector("p");
+        let targets = document.querySelectorAll("[data-tooltip]");
+        let xOffset = -10;
+        let yOffset = 80;
+        let cursorIsOnRight = false;
+        let currentTarget = null;
+        let lastText = '';
+
+        // Position cursor relative to actual cursor position on page load
+        gsap.set(cursorItem, { xPercent: xOffset, yPercent: yOffset });
+
+        // Use GSAP quick.to for a more performative tween on the cursor
+        let xTo = gsap.quickTo(cursorItem, "x", { ease: "power3" });
+        let yTo = gsap.quickTo(cursorItem, "y", { ease: "power3" });
+
+        // Function to get the width of the cursor element including a buffer
+        const getCursorEdgeThreshold = () => {
+          return cursorItem.offsetWidth + 16; // Cursor width + 16px margin
+        };
+
+        // On mousemove, call the quickTo functions to the actual cursor position
+        window.addEventListener("mousemove", e => {
+          let windowWidth = window.innerWidth;
+          let windowHeight = window.innerHeight;
+          let scrollY = window.scrollY;
+          let cursorX = e.clientX;
+          let cursorY = e.clientY + scrollY; // Adjust cursorY to account for scroll
+
+          // Default offsets
+          let xPercent = xOffset;
+          let yPercent = yOffset;
+
+          // Adjust X offset dynamically based on cursor width
+          let cursorEdgeThreshold = getCursorEdgeThreshold();
+          if (cursorX > windowWidth - cursorEdgeThreshold) {
+            cursorIsOnRight = true;
+            xPercent = -100;
+          } else {
+            cursorIsOnRight = false;
+          }
+
+          // Adjust Y offset if in the bottom 10% of the current viewport
+          if (cursorY > scrollY + windowHeight * 0.9) {
+            yPercent = -120;
+          }
+
+          if (currentTarget) {
+            let newText = currentTarget.getAttribute("data-tooltip");
+            if (newText !== lastText) { // Only update if the text is different
+              cursorParagraph.innerHTML = newText;
+              lastText = newText;
+              // Recalculate edge awareness whenever the text changes
+              cursorEdgeThreshold = getCursorEdgeThreshold();
+            }
+          }
+
+          gsap.to(cursorItem, {
+            xPercent: xPercent,
+            yPercent: yPercent,
+            duration: 0.9,
+            ease: "power3"
+          });
+          xTo(cursorX);
+          yTo(cursorY - scrollY);
+        });
+
+        // Add a mouse enter listener for each link that has a data-cursor attribute
+        targets.forEach(target => {
+          target.addEventListener("mouseenter", () => {
+            currentTarget = target; // Set the current target
+            let newText = target.getAttribute("data-tooltip");
+            // Update only if the text changes
+            if (newText !== lastText) {
+              cursorParagraph.innerHTML = newText;
+              lastText = newText;
+              // Recalculate edge awareness whenever the text changes
+              let cursorEdgeThreshold = getCursorEdgeThreshold();
+            }
+          });
+        });
+      }
+
+      // Initialize Dynamic Text Cursor (Edge Aware)
+      initDynamicCustomTextCursor();
+
+    });
+  });
+</script></div><div class="u-embed-js w-embed w-script"><script>
+window.addEventListener('load', function() {
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    // page load
+    let tl = gsap.timeline({ delay: 0 });
+    tl.set("[data-transition-overlay]", { opacity: 0 });
+    tl.fromTo("[data-transition-background]", {
+      clipPath: "polygon(50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 0%)",
+      width: "100%"
+    }, {
+      clipPath: "polygon(50% 0%, 100% 0%, 100% 0%, 100% 0%, 50% 0%, 0% 0%, 0% 0%, 0% 0%)",
+      duration: 0.6,
+      ease: "expo.out"
+    });
+    tl.to("[data-transition-logo]", {
+      opacity: 0,
+      y: -40,
+      duration: 0.2,
+      ease: "expo.out"
+    }, "<");
+    tl.set("[data-transition-wrap]", { display: "none" });
+  } else {
+    // Instantly hide transition elements if reduced motion is preferred
+    gsap.set("[data-transition-wrap]", { display: "none" });
+  }
+  // link click
+  $("a:not(.excluded-class)").on("click", function (e) {
+    let currentUrl = $(this).attr("href");
+    if ($(this).prop("hostname") === window.location.host && !currentUrl.includes("#") && $(this)
+      .attr("target") !== "_blank") {
+      e.preventDefault();
+      if (prefersReducedMotion) {
+        // Skip animations and navigate immediately
+        if (typeof lenis !== 'undefined') lenis.stop();
+        window.location.href = currentUrl;
+        return;
+      }
+      lenis.stop();
+      let tl = gsap.timeline({ onComplete: () => (window.location.href = currentUrl) });
+      tl.set("[data-transition-wrap]", { display: "flex" });
+      tl.set("[data-transition-background]", { yPercent: 0 });
+      tl.to("[data-transition-overlay]", {
+        opacity: 0.25,
+        duration: 0.3,
+        ease: "none"
+      });
+      tl.fromTo("[data-transition-background]", {
+        scale: 0,
+        rotate: -60
+      }, {
+        scale: 0.5,
+        rotate: 0,
+        duration: 0.5,
+        ease: "back.out(1.4)"
+      }, "<");
+      tl.to("[data-transition-background]", {
+        scale: 1,
+        duration: 0.35,
+        ease: "expo.inOut"
+      });
+      tl.fromTo("[data-transition-logo]", {
+        opacity: 0,
+        y: 40
+      }, {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "expo.inOut"
+      }, "<");
+      tl.fromTo("[data-transition-background]", {
+        clipPath: "polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%)",
+        width: "100vh",
+      }, {
+        clipPath: "polygon(50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 0%)",
+        width: "100%",
+        duration: 0.35,
+        ease: "expo.inOut"
+      }, "<+20%");
+    }
+  });
+  // On Back Button Tap
+  window.onpageshow = function (event) {
+    if (event.persisted) window.location.reload();
+  };
+});
+</script></div><a href="#main" class="nav_skip_wrap w-inline-block"><div class="nav_skip_text u-text-style-small">Skip to main content</div></a><header class="nav_desktop_wrap"><div class="nav_desktop_contain u-container-full"><div class="nav_desktop_layout"><a data-minigame-target="" aria-label="Home Page" data-nav-logo="" data-tooltip="Home" href="index.html" aria-current="page" class="nav_desktop_logo w-inline-block w--current"><div STYLE="" class="u-max-width-full"><img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/logoblack.png" alt="Dash Studios" style="width: 100%; height: auto; display: block;"></div></a><nav aria-label="Main" data-wf--menu--variant="desktop" class="nav_links_component w-variant-23049969-09ac-2789-520b-3c6ae895bbc6"><ul role="list" class="nav_links_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-list-unstyled"><li data-menu-item="" class="nav_links_item"><a data-stagger-hover="" href="our-games.html" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 is-merchants w-inline-block"><div class="nav_links_text u-text-style-h5 w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">Our Games</div><div data-nav-links-base="" class="nav_links_base u-cover-absolute w-variant-23049969-09ac-2789-520b-3c6ae895bbc6"></div></a><link rel="prefetch" href="our-games.html"/></li><li data-menu-item="" class="nav_links_item"><a data-stagger-hover="" href="development.html" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 is-studios w-inline-block"><div class="nav_links_text u-text-style-h5 w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">Our Process</div><div data-nav-links-base="" class="nav_links_base u-cover-absolute w-variant-23049969-09ac-2789-520b-3c6ae895bbc6"></div></a><link rel="prefetch" href="development.html"/></li><li data-menu-item="" class="nav_links_item"><a data-stagger-hover="" href="community.html" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 is-gamers w-inline-block"><div class="nav_links_text u-text-style-h5 w-variant-23049969-09ac-2789-520b-3c6ae895bbc6">About</div><div data-nav-links-base="" class="nav_links_base u-cover-absolute w-variant-23049969-09ac-2789-520b-3c6ae895bbc6"></div></a><link rel="prefetch" href="community.html"/></li></ul><ul role="list" class="nav_actions_wrap w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 w-list-unstyled"><li data-menu-item="" class="nav_buttons_item"><button data-stagger-cta="" data-gradient-bg="" id="" class="nav_links_link w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 is-cta u-theme-light" data-in-color="var(--swatch--light-base)" data-modal-trigger="modal-get-in-touch"><div class="nav_links_text u-text-style-h5 w-variant-23049969-09ac-2789-520b-3c6ae895bbc6 is-cta">Contact us</div></button></li></ul></nav></div></div></header><header class="nav_mobile_wrap"><div class="nav_mobile_contain u-container-full"><div class="nav_mobile_layout"><a data-tooltip="Home" aria-label="Home Page" data-nav-logo="" href="index.html" aria-current="page" class="nav_mobile_logo w-inline-block w--current"><div STYLE="" class="u-max-width-full"><img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/logoblack.png" alt="Dash Studios" style="width: 100%; height: auto; display: block;"></div></a><div data-menu-toggle="" class="button_menu_wrap" aria-expanded="false" data-button=" " data-trigger="hover focus"><div class="button_menu_element"><div aria-hidden="true" class="button_menu_icon"><div class="button_menu_icon_line"></div><div class="button_menu_icon_line"></div></div></div><div class="clickable_wrap u-cover-absolute"><a target="" href="#" class="clickable_link w-inline-block"><span class="clickable_text u-sr-only">Toggle menu</span></a><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only">Toggle menu</span></button></div><div class="u-embed-css w-embed"><style>
+.button_menu_icon_line {
+  transition: transform 0.3s ease-in-out;
+}
+
+.button_menu_wrap.is-active .button_menu_icon_line:first-child {
+  transform: translateY(0.175rem) rotate(45deg);
+}
+
+.button_menu_wrap.is-active .button_menu_icon_line:last-child {
+  transform: translateY(-0.175rem) rotate(-45deg); 
+}
+</style></div></div></div></div><div data-toggle-target="" class="nav_menu_wrap"><div data-menu-base="" class="nav_menu"><div data-wf--spacer--section-space="large" class="u-section-spacer w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3 u-ignore-trim"></div><div class="nav_menu_contain u-container"><nav aria-label="Main" data-wf--menu--variant="mobile" class="nav_links_component"><ul role="list" class="nav_links_wrap w-list-unstyled"><li data-menu-item="" class="nav_links_item"><a data-stagger-hover="" href="our-games.html" class="nav_links_link is-merchants w-inline-block"><div class="nav_links_text u-text-style-h5">Our Games</div><div data-nav-links-base="" class="nav_links_base u-cover-absolute"></div></a><link rel="prefetch" href="our-games.html"/></li><li data-menu-item="" class="nav_links_item"><a data-stagger-hover="" href="development.html" class="nav_links_link is-studios w-inline-block"><div class="nav_links_text u-text-style-h5">Our Process</div><div data-nav-links-base="" class="nav_links_base u-cover-absolute"></div></a><link rel="prefetch" href="development.html"/></li><li data-menu-item="" class="nav_links_item"><a data-stagger-hover="" href="community.html" class="nav_links_link is-gamers w-inline-block"><div class="nav_links_text u-text-style-h5">About</div><div data-nav-links-base="" class="nav_links_base u-cover-absolute"></div></a><link rel="prefetch" href="community.html"/></li></ul><ul role="list" class="nav_actions_wrap w-list-unstyled"><li data-menu-item="" class="nav_buttons_item"><button data-stagger-cta="" data-gradient-bg="" id="" class="nav_links_link is-cta u-theme-light" data-in-color="var(--swatch--light-base)" data-modal-trigger="modal-get-in-touch"><div class="nav_links_text u-text-style-h5 is-cta">Contact us</div></button></li></ul></nav></div></div><div data-menu-backdrop="" class="nav_menu_backdrop"></div></div></header><div class="tooltip"><p class="tooltip_text u-text-style-h5">Home</p></div><div data-transition-wrap="" class="transition_wrap" style="background: #000;">
+  <div data-transition-logo="" class="transition_logo" style="display: flex; align-items: center; justify-content: center; position: relative; z-index: 9999;">
+    <div STYLE="max-width: 200px;">
+      <img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/logo.png" alt="Dash Studios" style="width: 100%; height: auto; display: block;"/>
+    </div>
+  </div>
+  <div class="transition_background_wrap u-cover-absolute" style="background: #000;">
+    <div data-transition-background="" class="transition_background" style="background: #000;">
+      <div class="transition_background_fill u-cover-absolute" style="background: #000;"></div>
+    </div>
+  </div>
+  <div STYLE="opacity: 25%; background: #000;" class="overlay_wrap u-cover-absolute" data-transition-overlay=""></div>
+</div></div><main id="main" class="page_main"><dialog data-modal-target="modal-get-in-touch" data-show-in-designer="false" class="modal_dialog u-theme-light"><div class="u-embed-css w-embed"><style>
+.modal_dialog::backdrop { opacity: 0; }
+.wf-design-mode [data-show-in-designer="true"] {
+	display: block;
+}
+</style></div><div class="u-embed-js w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", function () {
+	const modalSystem = ((window.lumos ??= {}).modal ??= {
+		list: {}, open(id) { this.list[id]?.open?.(); }, closeAll() { Object.values(this.list).forEach((m) => m.close?.()); },
+	});
+	function createModals() {
+		document.querySelectorAll(".modal_dialog").forEach(function (modal) {
+		if (modal.dataset.scriptInitialized) return;
+		modal.dataset.scriptInitialized = "true";
+		const modalId = modal.getAttribute("data-modal-target");
+		let lastFocusedElement;
+		if (typeof gsap !== "undefined") {
+			gsap.context(() => {
+				let tl = gsap.timeline({ paused: true, onReverseComplete: resetModal });
+				tl.fromTo(modal, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, ease: "none" });
+				tl.from(".modal_content_wrap", { xPercent: 110, duration: 0.75, ease: "expo.out" }, ">-25%");
+        tl.from(".modal_content", { autoAlpha: 0, y: 40, duration: 0.75, ease: "expo.out" }, "<+25%");
+				modal.tl = tl;
+			}, modal);
+		}
+		function resetModal() {
+			typeof lenis !== "undefined" && lenis.start ? lenis.start() : (document.body.style.overflow = "");
+			modal.close();
+ 			if (lastFocusedElement) lastFocusedElement.focus();
+			window.dispatchEvent(new CustomEvent("modal-close", { detail: { modal } }));
+		}
+		function openModal() {
+			typeof lenis !== "undefined" && lenis.stop ? lenis.stop() : (document.body.style.overflow = "hidden");
+			lastFocusedElement = document.activeElement;
+			modal.showModal();
+			if (typeof gsap !== "undefined") {
+				modal.tl.timeScale(1);
+				modal.tl.play();
+			}
+			modal.querySelectorAll("[data-modal-scroll]").forEach((el) => (el.scrollTop = 0));
+			window.dispatchEvent(new CustomEvent("modal-open", { detail: { modal } }));
+		}
+		function closeModal() {
+			if (typeof gsap !== "undefined") {
+				modal.tl.timeScale(2);
+				modal.tl.reverse();
+			} else {
+				resetModal();
+			}
+		}
+		if (new URLSearchParams(location.search).get("modal-id") === modalId) openModal(), history.replaceState({}, "", ((u) => (u.searchParams.delete("modal-id"), u))(new URL(location.html)));
+		modal.addEventListener("cancel", (e) => (e.preventDefault(), closeModal()));
+		modal.addEventListener("click", (e) => e.target.closest("[data-modal-close]") && closeModal());
+		document.addEventListener("click", (e) => e.target.closest("[data-modal-trigger='" + modalId + "']") && openModal());
+			modalSystem.list[modalId] = { open: openModal, close: closeModal };
+		});
+	}
+	createModals();
+});
+</script></div><div class="modal_inner"><div data-modal-close="" class="modal_backdrop"></div><div class="modal_content_wrap"><div data-lenis-prevent=" " data-modal-scroll="" class="modal_scroll"><div class="modal_close"><div data-modal-close=" " class="button_close_wrap" autofocus=" " data-button=" " data-trigger="hover focus" data-button-icon=""><div data-gradient-bg="" class="button_close_element"><div aria-hidden="true" class="button_close_icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="u-svg"><path d="M13 1L1.00038 13" stroke="currentColor" stroke-width="0.09375rem" stroke-linecap="round"></path><path d="M1 1L12.9998 12.9998" stroke="currentColor" stroke-width="0.09375rem" stroke-linecap="round"></path></svg></div><div data-button-icon-base="" class="button_arrow_base u-cover-absolute"></div></div><div class="clickable_wrap u-cover-absolute"><a target="" href="#" class="clickable_link w-inline-block"><span class="clickable_text u-sr-only">Close</span></a><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only">Close</span></button></div></div></div><div class="modal_content"><div data-heading-reveal="" data-wf--typography-heading--font-style="h3" class="c-heading w-variant-701c4b6c-37cf-de59-d80d-80a1822c4994 w-richtext u-margin-bottom-3"><h2>Get in touch.</h2></div><div class="form_wrap w-form"><form name="Contact Form" aria-label="Contact Form" method="post" action="mailto:john.ikpeme@dashstudios.tech?subject=New Contact Form Submission" enctype="text/plain" class="form_element"><div class="form_layout"><fieldset data-wf--form-fieldset--layout="flex-vertical" class="form_fieldset_wrap"><legend data-wf--form-label-text--variant="hidden" class="form_label_text w-variant-46933b79-cf19-81b4-bc00-8af5c19b08b3">Form</legend><div class="form_fieldset_list"><label data-trigger="focus" class="form_label_wrap"><span data-wf--form-label-text--variant="hidden" class="form_label_text w-variant-46933b79-cf19-81b4-bc00-8af5c19b08b3">Full Name</span><input name="Full Name" type="text" placeholder="Full Name" required="" inputmode="text" autocomplete="given-name" class="form_field" value=""/></label><label data-trigger="focus" class="form_label_wrap"><span data-wf--form-label-text--variant="hidden" class="form_label_text w-variant-46933b79-cf19-81b4-bc00-8af5c19b08b3">Email Address</span><input name="Email Address" type="email" placeholder="Email Address" required="" inputmode="email" autocomplete="email" class="form_field" value=""/></label><label data-trigger="focus" class="form_label_wrap"><span data-wf--form-label-text--variant="hidden" class="form_label_text w-variant-46933b79-cf19-81b4-bc00-8af5c19b08b3">Message</span><textarea name="Message" placeholder="Your Message" class="form_field is-textarea"></textarea></label></div><div class="u-embed-css w-embed"><style>
+@container (width < 40em) {
+	.form_fieldset_list:has(.form_fieldset_list) { display: flex; }
+}
+@container (width < 18em) {
+	.form_fieldset_list { display: flex; }
+}
+</style></div></fieldset><div class="u-button-group u-margin-top-0" STYLE=""><div class="u-display-contents"><div class="button_main_wrap" data-button=" " data-trigger="hover focus" data-button-wrap=""><div class="u-embed-js w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".button_main_wrap").forEach((component) => {
+    if (component.dataset.scriptInitialized) return;
+    component.dataset.scriptInitialized = "true";
+    (function () {
+  const CONFIG = {
+    inColor: 'var(--_theme---heading-accent)',
+    outColor: 'var(--swatch--dark)',
+    staggerDelay: 0.02,
+    duration: 0.15,
+    phaseGap: 0,
+    staggerFrom: 'start',
+    buttonScale: 1.05,
+    buttonDuration: 0.6,
+    iconDistance: '100%',
+    iconRotation: 180,
+    iconDuration: 1
+  };
+  const mm = window.gsap.matchMedia();
+  mm.add('(hover: hover) and (pointer: fine)', () => {
+    const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')
+      .matches ?? false;
+    const buttonWraps = document.querySelectorAll('[data-button-wrap]');
+    const staggerConfig = {
+      each: CONFIG.staggerDelay,
+      from: CONFIG.staggerFrom
+    };
+
+    function setupReducedMotion(buttonWrap, buttonBase, iconBase, split, originalColor) {
+      buttonWrap.addEventListener('mouseenter', () => {
+        window.gsap.to(buttonBase, {
+          scale: CONFIG.buttonScale,
+          duration: 0.3
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, { autoAlpha: 0, duration: 0.3 });
+        }
+        split.chars.forEach(char => char.style.color = CONFIG.outColor);
+      });
+      buttonWrap.addEventListener('mouseleave', () => {
+        window.gsap.to(buttonBase, { scale: 1, duration: 0.2 });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            autoAlpha: 1,
+            duration: 0.2
+          });
+        }
+        split.chars.forEach(char => char.style.color = originalColor);
+      });
+    }
+
+    function setupFullAnimation(buttonWrap, buttonBase, iconBase, split, originalColor,
+      timeline) {
+      buttonWrap.addEventListener('mouseenter', () => {
+        // Kill any existing text animations before starting new ones
+        window.gsap.killTweensOf(split.chars);
+
+        window.gsap.to(buttonBase, {
+          scale: CONFIG.buttonScale,
+          duration: CONFIG.buttonDuration,
+          ease: 'expo.out'
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            x: CONFIG.iconDistance,
+            rotation: CONFIG.iconRotation,
+            duration: CONFIG.iconDuration,
+            ease: 'expo.out'
+          });
+        }
+        timeline.restart(true);
+      });
+      buttonWrap.addEventListener('mouseleave', () => {
+        // Kill the timeline to stop any ongoing animation
+        timeline.kill();
+
+        // Smoothly animate text back to original color
+        window.gsap.to(split.chars, {
+          color: originalColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig,
+          overwrite: 'auto'
+        });
+
+        window.gsap.to(buttonBase, {
+          scale: 1,
+          duration: CONFIG.buttonDuration,
+          ease: 'expo.out'
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            x: '0%',
+            rotation: 0,
+            duration: CONFIG.iconDuration,
+            ease: 'expo.out'
+          });
+        }
+      });
+      return () => {
+        timeline.kill();
+      };
+    }
+    buttonWraps.forEach((buttonWrap) => {
+      if (buttonWrap.dataset.scriptInitialized) return;
+      buttonWrap.dataset.scriptInitialized = 'true';
+      const buttonBase = buttonWrap.querySelector('[data-button-base]');
+      const iconBase = buttonWrap.querySelector('[data-button-icon-base]');
+      const buttonText = buttonWrap.querySelector('[data-button-text]');
+      if (!buttonBase || !buttonText) return;
+      const originalColor = window.getComputedStyle(buttonText).color;
+      const split = new window.SplitText(buttonText, {
+        type: 'chars',
+        charsClass: 'char'
+      });
+      window.gsap.set(split.chars, {
+        clearProps: 'opacity,backgroundImage,backgroundClip,webkitTextFillColor'
+      });
+      if (prefersReducedMotion) {
+        setupReducedMotion(buttonWrap, buttonBase, iconBase, split, originalColor);
+        return;
+      }
+      const timeline = window.gsap.timeline({ paused: true })
+        .to(split.chars, {
+          color: CONFIG.inColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig
+        })
+        .to(split.chars, {
+          color: CONFIG.outColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig
+        }, `>+${CONFIG.phaseGap}`);
+      const cleanup = setupFullAnimation(buttonWrap, buttonBase, iconBase, split,
+        originalColor, timeline);
+      if (window.MutationObserver) {
+        const observer = new MutationObserver(() => {
+          if (!document.body.contains(buttonWrap)) {
+            cleanup();
+            observer.disconnect();
+          }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      }
+    });
+    return () => {
+      buttonWraps.forEach(buttonWrap => {
+        if (buttonWrap.dataset.scriptInitialized) {
+          delete buttonWrap.dataset.scriptInitialized;
+        }
+      });
+    };
+  });
+})();
+
+  });
+});
+</script></div><div class="clickable_wrap u-cover-absolute"><a target="" href="#" class="clickable_link w-inline-block"><span class="clickable_text u-sr-only">Submit</span></a><button type="submit" class="clickable_btn"><span class="clickable_text u-sr-only">Submit</span></button></div><div class="button_main_element"><div class="button_main_text_wrap"><div data-button-text="" aria-hidden="true" class="button_main_text u-text-style-h5 u-text-trim-off">Submit</div></div><div data-gradient-bg="" class="button_main_icon"><div class="button_main_icon_inner"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 16" fill="none" class="u-svg"><g clip-path="url(#clip0_4052_922)"><path d="M13.8563 9.24998C14.8165 8.75272 14.8165 7.37926 13.8563 6.882L3.84821 1.69925C2.66122 1.08457 1.40881 2.40439 2.08481 3.55755L4.72771 8.06598L2.08483 12.5744C1.40883 13.7276 2.66126 15.0474 3.84821 14.4327L13.8563 9.24998Z" fill="currentColor"></path></g><defs><clippath id="clip0_4052_922"><rect width="16" height="16" fill="currentColor"></rect></clippath></defs></svg></div><div data-button-icon-base="" class="button_main_icon_base u-cover-absolute"></div></div><div data-button-base="" data-shadow="" class="button_main_base u-cover-absolute"></div></div></div></div></div></div></form><div tabindex="-1" role="region" aria-label="Form Success" class="form_success_wrap w-form-done"><div class="form_success_text">Thank you! Your submission has been received!</div></div><div tabindex="-1" role="region" aria-label="Form Failure" class="form_error_wrap w-form-fail"><div class="form_error_text">Oops! Something went wrong while submitting the form.</div></div><div class="u-display-none w-form"><form method="get" name="email-form" data-name="Email Form" data-wf-page-id="68e6392b59d31f870cef57bc" data-wf-element-id="bf7970fc-209c-ae43-67b3-617852be4c55" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"></form><div class="w-form-done"></div><div class="w-form-fail"></div></div></div></div></div></div></div></dialog><section class="hero_home_wrap u-section u-min-height-screen"><div class="u-embed-css w-embed"><style>
+@container (width >= 65em) { 
+	.hero_home_layout { gap: 6rem !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero_home_trigger.is-1 {
+    height: 100% !important;
+  }
+  .hero_home_trigger.is-2 {
+    display: none !important;
+  }
+  .hero_home_wrap {
+    height: 100vh !important;
+  }
+}
+
+.wf-design-mode .hero_home_wrap {
+    height: 100vh !important;
+  }
+</style></div><div class="u-embed-js w-embed w-script"><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".hero_home_wrap").forEach((component) => {
+      if (component.dataset.scriptInitialized) return;
+      component.dataset.scriptInitialized = "true";
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isTabletOrBelow = window.matchMedia('(max-width: 1024px)').matches;
+      const scrollTrigger = document.querySelector('[data-hero-track]');
+      const trigger = document.querySelector('[data-hero-trigger]');
+      const targets = document.querySelectorAll('[data-hero-content]');
+      const pinnedEl = document.querySelector('[data-hero-pin]');
+      const visual = document.querySelector('[data-hero-visual]');
+      const logo = document.querySelectorAll('[data-nav-logo]');
+
+      if (!scrollTrigger || targets.length === 0 || !pinnedEl) {
+        console.warn('Hero scroll: Missing required elements');
+      } else {
+        if (prefersReducedMotion) {
+          // NO animation for reduced motion - just show content
+          gsap.set(targets, { opacity: 1, y: 0 });
+          if (visual) {
+            gsap.set(visual, { opacity: 1 });
+          }
+          if (logo) {
+            gsap.set(logo, { opacity: 1, y: 0 });
+          }
+        } else {
+          // Full animation WITH pinning
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: scrollTrigger,
+              pin: pinnedEl,
+              start: "top top",
+              end: "bottom bottom",
+              toggleActions: "play none none reverse",
+              markers: false,
+              scrub: true
+            }
+          });
+
+          tl.to(targets, {
+            opacity: 0,
+            y: 50,
+            stagger: {
+              each: 0.03,
+              from: isTabletOrBelow ? "start" : "end"
+            },
+            duration: 0.4,
+            ease: "expo.inOut"
+          });
+
+          tl.fromTo(visual, {
+            clipPath: "polygon(50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0 50%, 0% 0%)",
+            scale: 1,
+            width: "100vw"
+          }, {
+            clipPath: "polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%)",
+            scale: isTabletOrBelow ? 0.4 : 0.7,
+            width: "100vh",
+            duration: 1,
+            ease: "expo.out"
+          }, 0.2);
+
+          // Logo animation - ONLY for full motion
+          if (trigger && logo) {
+            // Set initial state
+            gsap.set(logo, { opacity: 0, y: -20 });
+
+            const logoTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: trigger,
+                start: "top top",
+                end: "top top",
+                toggleActions: "play none none reverse",
+                markers: false
+              }
+            });
+
+            logoTl.to(logo, {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              ease: "expo.out"
+            });
+          }
+        }
+      }
+
+      function refreshScrollTrigger() {
+        if (typeof ScrollTrigger !== 'undefined') {
+          ScrollTrigger.refresh();
+        }
+      }
+
+      window.addEventListener('load', () => {
+        refreshScrollTrigger();
+      });
+
+    });
+  });
+</script></div><div data-hero-track="" class="hero_home_track"><div data-animate-theme-to="dark" class="hero_home_trigger is-1"></div><div data-hero-trigger="" data-animate-theme-to="light" class="hero_home_trigger is-2"></div></div><div data-hero-pin="" class="hero_home_component"><div class="hero_home_content"><div data-wf--spacer--section-space="large" class="u-section-spacer w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3 u-ignore-trim"></div><div class="hero_home_contain u-container-full u-theme-dark"><div class="hero_home_layout"><div data-hero-content="" class="hero_home_logo"><div STYLE="" class="u-max-width-full"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 210 35" fill="none" class="u-svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+  </style>
+  <text 
+    x="0" 
+    y="28" 
+    font-family="'Lilita One', cursive" 
+    font-weight="450" 
+    font-size="27" 
+    letter-spacing="1" 
+    fill="currentColor">
+    DASH STUDIOS®
+  </text>
+</svg></div></div><h1 data-hero-content="" class="hero_home_title u-text-style-h3">Telling African Stories Through Immersive Games</h1></div></div><div data-wf--spacer--section-space="even" class="u-section-spacer w-variant-41fc0c0a-cac3-53c9-9802-6a916e3fb342 u-ignore-trim"></div></div><div class="hero_home_visual_wrap u-cover-absolute"><div data-hero-visual="" class="hero_home_visual"><div STYLE="opacity: 10%;" class="overlay_wrap u-cover-absolute u-zindex-3"></div><div class="hero_home_vid_desktop u-cover-absolute">
+  <img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/header.png" loading="lazy" alt="" class="u-cover-absolute" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+<div class="hero_home_vid_mobile u-cover-absolute">
+  <img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/header.png" loading="lazy" alt="" class="u-cover-absolute" style="width: 100%; height: 100%; object-fit: cover;">
+</div></div></div></div></section><section data-animate-theme-to="light" class="how_wrap u-section"><div data-wf--spacer--section-space="large" class="u-section-spacer w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3 u-ignore-trim"></div><div class="how_contain u-container u-alignment-center"><div class="how_title_wrap"><div data-heading-reveal="" data-wf--typography-heading--font-style="h1" class="c-heading w-variant-792802b6-ccdb-f982-5023-5fa970cf03d0 w-richtext u-margin-bottom-text u-heading-accent u-max-width-18ch u-margin-inline-auto"><h2>Where culture meets gameplay.<br/>‍<strong>Stories come alive.</strong></h2></div><div data-wf--typography-paragraph--font-style="text-large" class="c-text w-variant-fdb8e663-01e0-aae6-13eb-e6dfca16b689 w-richtext u-rich-text u-color-faded u-max-width-25ch u-margin-inline-auto"><p>We create deep, narrative‑driven experiences inspired by Africa’s rich heritage.</p></div></div><div data-wf--spacer--section-space="main" class="u-section-spacer w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490 u-ignore-trim"></div><div class="how_layout u-grid-autofill"></div></div><div data-wf--spacer--section-space="main" class="u-section-spacer w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490 u-ignore-trim"></div></section><section data-momentum-hover-init="" data-animate-theme-to="merchant" class="product_wrap u-section"><div class="u-embed-css w-embed"><style>
+  .is-merchant {
+    clip-path: polygon( 0.75rem 0%, calc(100% - 0.75rem) 0%, 100% 50%, calc(100% - 0.75rem) 100%, 0.75rem 100%, 0% 50% );
+  }
+  .is-studio {
+    clip-path: polygon(0% calc(0% + 0.4375rem), calc(0% + 0.4375rem) calc(0% + 0.4375rem), calc(0% + 0.4375rem) 0%, calc(100% - 0.4375rem) 0%, calc(100% - 0.4375rem) calc(0% + 0.4375rem), 100% calc(0% + 0.4375rem), 100% calc(100% - 0.4375rem), calc(100% - 0.4375rem) calc(100% - 0.4375rem), calc(100% - 0.4375rem) 100%, calc(0% + 0.4375rem) 100%, calc(0% + 0.4375rem) calc(100% - 0.4375rem), 0% calc(100% - 0.4375rem));
+  }
+  .is-gamer {
+    border-radius: 0.25rem;
+  }
+  
+  .product_lifestyle_wrap.is-right {
+  	inset: auto -14% 20% auto;
+  }
+  /* Add this to your custom CSS */
+.u-heading-accent {
+  text-wrap: balance; /* Modern browsers */
+  hyphens: auto; /* For better word breaking */
+}
+
+/* Or more specifically for mobile */
+@media (max-width: 767px) {
+  .how_title_wrap h2 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+  
+  .u-heading-accent strong,
+  .u-heading-accent b {
+    display: inline-block; /* Helps with gradient positioning */
+  }
+}
+</style></div><div data-wf--spacer--section-space="main" class="u-section-spacer w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490 u-ignore-trim"></div><div class="product_contain u-container u-alignment-center u-flex-vertical-nowrap"><div class="product_header"><div class="product_header_text_wrap"><div class="product_header_text u-text-style-h5">our</div></div><a data-stagger-hover="" href="our-games.html" class="product_link w-inline-block is-merchant"><div class="product_link_text u-text-style-h5">Games</div><div data-nav-links-base="" class="nav_links_base u-cover-absolute"></div></a><link rel="prefetch" href="our-games.html"/></div><div data-heading-reveal="true" data-wf--typography-heading--font-style="h1" class="c-heading w-variant-792802b6-ccdb-f982-5023-5fa970cf03d0 w-richtext u-max-width-18ch u-margin-bottom-4"><h2>Immerse yourself in games shaped by African heritage.</h2></div><div data-shadow="" class="product_visual" style="background: none; overflow: visible;">
+  <div class="c-image-wrap u-cover-absolute" style="border-radius: 1rem; overflow: hidden;">
+    <img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/new-games.gif" loading="lazy" alt="African heritage games showcase" class="c-image" style="border-radius: 1rem; width: 100%; height: 100%; object-fit: cover;"/>
+  </div>
+  <div data-parallax-disable="mobileLandscape" data-momentum-hover-element="" data-parallax="trigger" data-parallax-start="20" data-parallax-end="-20" class="product_lifestyle_wrap"><div data-momentum-hover-target="" class="product_lifestyle_img"><div class="c-image-wrap u-cover-absolute" STYLE=""><img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/big-games.jpg" loading="lazy" alt="Game preview" class="c-image"/></div></div></div></div><div data-wf--typography-paragraph--font-style="text-large" class="c-text w-variant-fdb8e663-01e0-aae6-13eb-e6dfca16b689 w-richtext u-rich-text u-max-width-30ch u-margin-top-3"><p>Our games are crafted with deep respect for the cultures that inspire them, offering rich narratives and engaging mechanics.</p></div><div class="u-button-group u-margin-top-2-5" STYLE=""><div class="u-display-contents"><div class="button_main_wrap" data-button=" " data-trigger="hover focus" data-button-wrap=""><div class="u-embed-js w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".button_main_wrap").forEach((component) => {
+    if (component.dataset.scriptInitialized) return;
+    component.dataset.scriptInitialized = "true";
+    (function () {
+  const CONFIG = {
+    inColor: 'var(--_theme---heading-accent)',
+    outColor: 'var(--swatch--dark)',
+    staggerDelay: 0.02,
+    duration: 0.15,
+    phaseGap: 0,
+    staggerFrom: 'start',
+    buttonScale: 1.05,
+    buttonDuration: 0.6,
+    iconDistance: '100%',
+    iconRotation: 180,
+    iconDuration: 1
+  };
+  const mm = window.gsap.matchMedia();
+  mm.add('(hover: hover) and (pointer: fine)', () => {
+    const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')
+      .matches ?? false;
+    const buttonWraps = document.querySelectorAll('[data-button-wrap]');
+    const staggerConfig = {
+      each: CONFIG.staggerDelay,
+      from: CONFIG.staggerFrom
+    };
+
+    function setupReducedMotion(buttonWrap, buttonBase, iconBase, split, originalColor) {
+      buttonWrap.addEventListener('mouseenter', () => {
+        window.gsap.to(buttonBase, {
+          scale: CONFIG.buttonScale,
+          duration: 0.3
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, { autoAlpha: 0, duration: 0.3 });
+        }
+        split.chars.forEach(char => char.style.color = CONFIG.outColor);
+      });
+      buttonWrap.addEventListener('mouseleave', () => {
+        window.gsap.to(buttonBase, { scale: 1, duration: 0.2 });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            autoAlpha: 1,
+            duration: 0.2
+          });
+        }
+        split.chars.forEach(char => char.style.color = originalColor);
+      });
+    }
+
+    function setupFullAnimation(buttonWrap, buttonBase, iconBase, split, originalColor,
+      timeline) {
+      buttonWrap.addEventListener('mouseenter', () => {
+        // Kill any existing text animations before starting new ones
+        window.gsap.killTweensOf(split.chars);
+
+        window.gsap.to(buttonBase, {
+          scale: CONFIG.buttonScale,
+          duration: CONFIG.buttonDuration,
+          ease: 'expo.out'
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            x: CONFIG.iconDistance,
+            rotation: CONFIG.iconRotation,
+            duration: CONFIG.iconDuration,
+            ease: 'expo.out'
+          });
+        }
+        timeline.restart(true);
+      });
+      buttonWrap.addEventListener('mouseleave', () => {
+        // Kill the timeline to stop any ongoing animation
+        timeline.kill();
+
+        // Smoothly animate text back to original color
+        window.gsap.to(split.chars, {
+          color: originalColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig,
+          overwrite: 'auto'
+        });
+
+        window.gsap.to(buttonBase, {
+          scale: 1,
+          duration: CONFIG.buttonDuration,
+          ease: 'expo.out'
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            x: '0%',
+            rotation: 0,
+            duration: CONFIG.iconDuration,
+            ease: 'expo.out'
+          });
+        }
+      });
+      return () => {
+        timeline.kill();
+      };
+    }
+    buttonWraps.forEach((buttonWrap) => {
+      if (buttonWrap.dataset.scriptInitialized) return;
+      buttonWrap.dataset.scriptInitialized = 'true';
+      const buttonBase = buttonWrap.querySelector('[data-button-base]');
+      const iconBase = buttonWrap.querySelector('[data-button-icon-base]');
+      const buttonText = buttonWrap.querySelector('[data-button-text]');
+      if (!buttonBase || !buttonText) return;
+      const originalColor = window.getComputedStyle(buttonText).color;
+      const split = new window.SplitText(buttonText, {
+        type: 'chars',
+        charsClass: 'char'
+      });
+      window.gsap.set(split.chars, {
+        clearProps: 'opacity,backgroundImage,backgroundClip,webkitTextFillColor'
+      });
+      if (prefersReducedMotion) {
+        setupReducedMotion(buttonWrap, buttonBase, iconBase, split, originalColor);
+        return;
+      }
+      const timeline = window.gsap.timeline({ paused: true })
+        .to(split.chars, {
+          color: CONFIG.inColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig
+        })
+        .to(split.chars, {
+          color: CONFIG.outColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig
+        }, `>+${CONFIG.phaseGap}`);
+      const cleanup = setupFullAnimation(buttonWrap, buttonBase, iconBase, split,
+        originalColor, timeline);
+      if (window.MutationObserver) {
+        const observer = new MutationObserver(() => {
+          if (!document.body.contains(buttonWrap)) {
+            cleanup();
+            observer.disconnect();
+          }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      }
+    });
+    return () => {
+      buttonWraps.forEach(buttonWrap => {
+        if (buttonWrap.dataset.scriptInitialized) {
+          delete buttonWrap.dataset.scriptInitialized;
+        }
+      });
+    };
+  });
+})();
+
+  });
+});
+</script></div><div class="clickable_wrap u-cover-absolute"><a target="" href="our-games.html" class="clickable_link w-inline-block"><span class="clickable_text u-sr-only">Explore our games</span></a><link rel="prefetch" href="our-games.html"/><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only">Explore our games</span></button></div><div class="button_main_element"><div class="button_main_text_wrap"><div data-button-text="" aria-hidden="true" class="button_main_text u-text-style-h5 u-text-trim-off">Explore our games</div></div><div data-gradient-bg="" class="button_main_icon"><div class="button_main_icon_inner"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 16" fill="none" class="u-svg"><g clip-path="url(#clip0_4052_922)"><path d="M13.8563 9.24998C14.8165 8.75272 14.8165 7.37926 13.8563 6.882L3.84821 1.69925C2.66122 1.08457 1.40881 2.40439 2.08481 3.55755L4.72771 8.06598L2.08483 12.5744C1.40883 13.7276 2.66126 15.0474 3.84821 14.4327L13.8563 9.24998Z" fill="currentColor"></path></g><defs><clippath id="clip0_4052_922"><rect width="16" height="16" fill="currentColor"></rect></clippath></defs></svg></div><div data-button-icon-base="" class="button_main_icon_base u-cover-absolute"></div></div><div data-button-base="" data-shadow="" class="button_main_base u-cover-absolute"></div></div></div></div></div></div><div data-wf--spacer--section-space="main" class="u-section-spacer w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490 u-ignore-trim"></div></section><section data-momentum-hover-init="" data-animate-theme-to="studio" class="product_wrap u-section"><div class="u-embed-css w-embed"><style>
+  .is-merchant {
+    clip-path: polygon( 0.75rem 0%, calc(100% - 0.75rem) 0%, 100% 50%, calc(100% - 0.75rem) 100%, 0.75rem 100%, 0% 50% );
+  }
+  .is-studio {
+    clip-path: polygon(0% calc(0% + 0.4375rem), calc(0% + 0.4375rem) calc(0% + 0.4375rem), calc(0% + 0.4375rem) 0%, calc(100% - 0.4375rem) 0%, calc(100% - 0.4375rem) calc(0% + 0.4375rem), 100% calc(0% + 0.4375rem), 100% calc(100% - 0.4375rem), calc(100% - 0.4375rem) calc(100% - 0.4375rem), calc(100% - 0.4375rem) 100%, calc(0% + 0.4375rem) 100%, calc(0% + 0.4375rem) calc(100% - 0.4375rem), 0% calc(100% - 0.4375rem));
+  }
+  .is-gamer {
+    border-radius: 0.25rem;
+  }
+  
+  .product_lifestyle_wrap.is-right {
+  	inset: auto -14% 20% auto;
+  }
+</style></div><div data-wf--spacer--section-space="main" class="u-section-spacer w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490 u-ignore-trim"></div><div class="product_contain u-container u-alignment-center u-flex-vertical-nowrap"><div class="product_header"><div class="product_header_text_wrap"><div class="product_header_text u-text-style-h5">our</div></div><a data-stagger-hover="" href="development.html" class="product_link w-inline-block is-studio"><div class="product_link_text u-text-style-h5">Process</div><div data-nav-links-base="" class="nav_links_base u-cover-absolute"></div></a></div><div data-heading-reveal="true" data-wf--typography-heading--font-style="h1" class="c-heading w-variant-792802b6-ccdb-f982-5023-5fa970cf03d0 w-richtext u-max-width-18ch u-margin-bottom-4"><h2>Where authentic gaming concepts meet world-class game design.</h2></div><div data-shadow="" class="product_visual" style="background: none; overflow: visible;">
+  <div class="c-image-wrap u-cover-absolute" style="border-radius: 1rem; overflow: hidden;">
+    <img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/concepts.jpg" loading="lazy" alt="Authentic gaming concepts" class="c-image" style="border-radius: 1rem; width: 100%; height: 100%; object-fit: cover;"/>
+  </div>
+  <div data-parallax-disable="mobileLandscape" data-momentum-hover-element="" data-parallax="trigger" data-parallax-start="20" data-parallax-end="-20" class="product_lifestyle_wrap is-right">
+    <div data-momentum-hover-target="" class="product_lifestyle_img">
+      <div class="c-image-wrap u-cover-absolute" STYLE="">
+        <img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/floating.jpg" loading="lazy" alt="" class="c-image"/>
+      </div>
+    </div>
+  </div>
+</div><div data-wf--typography-paragraph--font-style="text-large" class="c-text w-variant-fdb8e663-01e0-aae6-13eb-e6dfca16b689 w-richtext u-rich-text u-max-width-30ch u-margin-top-3"><p>Our approach combines research, cultural validation, and strong gameplay design.</p></div><div class="u-button-group u-margin-top-2-5" STYLE=""><div class="u-display-contents"><div class="button_main_wrap" data-button=" " data-trigger="hover focus" data-button-wrap=""><div class="u-embed-js w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".button_main_wrap").forEach((component) => {
+    if (component.dataset.scriptInitialized) return;
+    component.dataset.scriptInitialized = "true";
+    (function () {
+  const CONFIG = {
+    inColor: 'var(--_theme---heading-accent)',
+    outColor: 'var(--swatch--dark)',
+    staggerDelay: 0.02,
+    duration: 0.15,
+    phaseGap: 0,
+    staggerFrom: 'start',
+    buttonScale: 1.05,
+    buttonDuration: 0.6,
+    iconDistance: '100%',
+    iconRotation: 180,
+    iconDuration: 1
+  };
+  const mm = window.gsap.matchMedia();
+  mm.add('(hover: hover) and (pointer: fine)', () => {
+    const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')
+      .matches ?? false;
+    const buttonWraps = document.querySelectorAll('[data-button-wrap]');
+    const staggerConfig = {
+      each: CONFIG.staggerDelay,
+      from: CONFIG.staggerFrom
+    };
+
+    function setupReducedMotion(buttonWrap, buttonBase, iconBase, split, originalColor) {
+      buttonWrap.addEventListener('mouseenter', () => {
+        window.gsap.to(buttonBase, {
+          scale: CONFIG.buttonScale,
+          duration: 0.3
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, { autoAlpha: 0, duration: 0.3 });
+        }
+        split.chars.forEach(char => char.style.color = CONFIG.outColor);
+      });
+      buttonWrap.addEventListener('mouseleave', () => {
+        window.gsap.to(buttonBase, { scale: 1, duration: 0.2 });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            autoAlpha: 1,
+            duration: 0.2
+          });
+        }
+        split.chars.forEach(char => char.style.color = originalColor);
+      });
+    }
+
+    function setupFullAnimation(buttonWrap, buttonBase, iconBase, split, originalColor,
+      timeline) {
+      buttonWrap.addEventListener('mouseenter', () => {
+        // Kill any existing text animations before starting new ones
+        window.gsap.killTweensOf(split.chars);
+
+        window.gsap.to(buttonBase, {
+          scale: CONFIG.buttonScale,
+          duration: CONFIG.buttonDuration,
+          ease: 'expo.out'
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            x: CONFIG.iconDistance,
+            rotation: CONFIG.iconRotation,
+            duration: CONFIG.iconDuration,
+            ease: 'expo.out'
+          });
+        }
+        timeline.restart(true);
+      });
+      buttonWrap.addEventListener('mouseleave', () => {
+        // Kill the timeline to stop any ongoing animation
+        timeline.kill();
+
+        // Smoothly animate text back to original color
+        window.gsap.to(split.chars, {
+          color: originalColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig,
+          overwrite: 'auto'
+        });
+
+        window.gsap.to(buttonBase, {
+          scale: 1,
+          duration: CONFIG.buttonDuration,
+          ease: 'expo.out'
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            x: '0%',
+            rotation: 0,
+            duration: CONFIG.iconDuration,
+            ease: 'expo.out'
+          });
+        }
+      });
+      return () => {
+        timeline.kill();
+      };
+    }
+    buttonWraps.forEach((buttonWrap) => {
+      if (buttonWrap.dataset.scriptInitialized) return;
+      buttonWrap.dataset.scriptInitialized = 'true';
+      const buttonBase = buttonWrap.querySelector('[data-button-base]');
+      const iconBase = buttonWrap.querySelector('[data-button-icon-base]');
+      const buttonText = buttonWrap.querySelector('[data-button-text]');
+      if (!buttonBase || !buttonText) return;
+      const originalColor = window.getComputedStyle(buttonText).color;
+      const split = new window.SplitText(buttonText, {
+        type: 'chars',
+        charsClass: 'char'
+      });
+      window.gsap.set(split.chars, {
+        clearProps: 'opacity,backgroundImage,backgroundClip,webkitTextFillColor'
+      });
+      if (prefersReducedMotion) {
+        setupReducedMotion(buttonWrap, buttonBase, iconBase, split, originalColor);
+        return;
+      }
+      const timeline = window.gsap.timeline({ paused: true })
+        .to(split.chars, {
+          color: CONFIG.inColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig
+        })
+        .to(split.chars, {
+          color: CONFIG.outColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig
+        }, `>+${CONFIG.phaseGap}`);
+      const cleanup = setupFullAnimation(buttonWrap, buttonBase, iconBase, split,
+        originalColor, timeline);
+      if (window.MutationObserver) {
+        const observer = new MutationObserver(() => {
+          if (!document.body.contains(buttonWrap)) {
+            cleanup();
+            observer.disconnect();
+          }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      }
+    });
+    return () => {
+      buttonWraps.forEach(buttonWrap => {
+        if (buttonWrap.dataset.scriptInitialized) {
+          delete buttonWrap.dataset.scriptInitialized;
+        }
+      });
+    };
+  });
+})();
+
+  });
+});
+</script></div><div class="clickable_wrap u-cover-absolute"><a target="" href="development.html" class="clickable_link w-inline-block"><span class="clickable_text u-sr-only">See our process</span></a><link rel="prefetch" href="development.html"/><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only">See our process</span></button></div><div class="button_main_element"><div class="button_main_text_wrap"><div data-button-text="" aria-hidden="true" class="button_main_text u-text-style-h5 u-text-trim-off">See our process</div></div><div data-gradient-bg="" class="button_main_icon"><div class="button_main_icon_inner"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 16" fill="none" class="u-svg"><g clip-path="url(#clip0_4052_922)"><path d="M13.8563 9.24998C14.8165 8.75272 14.8165 7.37926 13.8563 6.882L3.84821 1.69925C2.66122 1.08457 1.40881 2.40439 2.08481 3.55755L4.72771 8.06598L2.08483 12.5744C1.40883 13.7276 2.66126 15.0474 3.84821 14.4327L13.8563 9.24998Z" fill="currentColor"></path></g><defs><clippath id="clip0_4052_922"><rect width="16" height="16" fill="currentColor"></rect></clippath></defs></svg></div><div data-button-icon-base="" class="button_main_icon_base u-cover-absolute"></div></div><div data-button-base="" data-shadow="" class="button_main_base u-cover-absolute"></div></div></div></div></div></div><div data-wf--spacer--section-space="main" class="u-section-spacer w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490 u-ignore-trim"></div></section><section data-momentum-hover-init="" data-animate-theme-to="gamer" class="product_wrap u-section"><div class="u-embed-css w-embed"><style>
+  .is-merchant {
+    clip-path: polygon( 0.75rem 0%, calc(100% - 0.75rem) 0%, 100% 50%, calc(100% - 0.75rem) 100%, 0.75rem 100%, 0% 50% );
+  }
+  .is-studio {
+    clip-path: polygon(0% calc(0% + 0.4375rem), calc(0% + 0.4375rem) calc(0% + 0.4375rem), calc(0% + 0.4375rem) 0%, calc(100% - 0.4375rem) 0%, calc(100% - 0.4375rem) calc(0% + 0.4375rem), 100% calc(0% + 0.4375rem), 100% calc(100% - 0.4375rem), calc(100% - 0.4375rem) calc(100% - 0.4375rem), calc(100% - 0.4375rem) 100%, calc(0% + 0.4375rem) 100%, calc(0% + 0.4375rem) calc(100% - 0.4375rem), 0% calc(100% - 0.4375rem));
+  }
+  .is-gamer {
+    border-radius: 0.25rem;
+  }
+  
+  .product_lifestyle_wrap.is-right {
+  	inset: auto -14% 20% auto;
+  }
+</style></div><div data-wf--spacer--section-space="main" class="u-section-spacer w-variant-60a7ad7d-02b0-6682-95a5-2218e6fd1490 u-ignore-trim"></div><div class="product_contain u-container u-alignment-center u-flex-vertical-nowrap"><div class="product_header"><div class="product_header_text_wrap"><div class="product_header_text u-text-style-h5">our</div></div><a data-stagger-hover="" href="community.html" class="product_link w-inline-block is-gamer"><div class="product_link_text u-text-style-h5">Story</div><div data-nav-links-base="" class="nav_links_base u-cover-absolute"></div></a><link rel="prefetch" href="community.html"/></div><div data-heading-reveal="true" data-wf--typography-heading--font-style="h1" class="c-heading w-variant-792802b6-ccdb-f982-5023-5fa970cf03d0 w-richtext u-max-width-18ch u-margin-bottom-4"><h2>Championing African Stories through gaming.</h2></div><div data-shadow="" class="product_visual" style="background: none; overflow: visible;">
+  <div class="c-image-wrap u-cover-absolute" style="border-radius: 1rem; overflow: hidden;">
+    <img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/diversity_faces.gif" loading="lazy" alt="Community diversity" class="c-image" style="border-radius: 1rem; width: 100%; height: 100%; object-fit: cover;"/>
+  </div>
+  <div data-parallax-disable="mobileLandscape" data-momentum-hover-element="" data-parallax="trigger" data-parallax-start="20" data-parallax-end="-20" class="product_lifestyle_wrap">
+    <div data-momentum-hover-target="" class="product_lifestyle_img">
+      <div class="c-image-wrap u-cover-absolute" STYLE="">
+        <img src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/users.png" loading="lazy" alt="" class="c-image"/>
+      </div>
+    </div>
+  </div>
+</div><div data-wf--typography-paragraph--font-style="text-large" class="c-text w-variant-fdb8e663-01e0-aae6-13eb-e6dfca16b689 w-richtext u-rich-text u-max-width-30ch u-margin-top-3"><p>African-made games built for the global market.</p></div><div class="u-button-group u-margin-top-2-5" STYLE=""><div class="u-display-contents"><div class="button_main_wrap" data-button=" " data-trigger="hover focus" data-button-wrap=""><div class="u-embed-js w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".button_main_wrap").forEach((component) => {
+    if (component.dataset.scriptInitialized) return;
+    component.dataset.scriptInitialized = "true";
+    (function () {
+  const CONFIG = {
+    inColor: 'var(--_theme---heading-accent)',
+    outColor: 'var(--swatch--dark)',
+    staggerDelay: 0.02,
+    duration: 0.15,
+    phaseGap: 0,
+    staggerFrom: 'start',
+    buttonScale: 1.05,
+    buttonDuration: 0.6,
+    iconDistance: '100%',
+    iconRotation: 180,
+    iconDuration: 1
+  };
+  const mm = window.gsap.matchMedia();
+  mm.add('(hover: hover) and (pointer: fine)', () => {
+    const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')
+      .matches ?? false;
+    const buttonWraps = document.querySelectorAll('[data-button-wrap]');
+    const staggerConfig = {
+      each: CONFIG.staggerDelay,
+      from: CONFIG.staggerFrom
+    };
+
+    function setupReducedMotion(buttonWrap, buttonBase, iconBase, split, originalColor) {
+      buttonWrap.addEventListener('mouseenter', () => {
+        window.gsap.to(buttonBase, {
+          scale: CONFIG.buttonScale,
+          duration: 0.3
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, { autoAlpha: 0, duration: 0.3 });
+        }
+        split.chars.forEach(char => char.style.color = CONFIG.outColor);
+      });
+      buttonWrap.addEventListener('mouseleave', () => {
+        window.gsap.to(buttonBase, { scale: 1, duration: 0.2 });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            autoAlpha: 1,
+            duration: 0.2
+          });
+        }
+        split.chars.forEach(char => char.style.color = originalColor);
+      });
+    }
+
+    function setupFullAnimation(buttonWrap, buttonBase, iconBase, split, originalColor,
+      timeline) {
+      buttonWrap.addEventListener('mouseenter', () => {
+        // Kill any existing text animations before starting new ones
+        window.gsap.killTweensOf(split.chars);
+
+        window.gsap.to(buttonBase, {
+          scale: CONFIG.buttonScale,
+          duration: CONFIG.buttonDuration,
+          ease: 'expo.out'
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            x: CONFIG.iconDistance,
+            rotation: CONFIG.iconRotation,
+            duration: CONFIG.iconDuration,
+            ease: 'expo.out'
+          });
+        }
+        timeline.restart(true);
+      });
+      buttonWrap.addEventListener('mouseleave', () => {
+        // Kill the timeline to stop any ongoing animation
+        timeline.kill();
+
+        // Smoothly animate text back to original color
+        window.gsap.to(split.chars, {
+          color: originalColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig,
+          overwrite: 'auto'
+        });
+
+        window.gsap.to(buttonBase, {
+          scale: 1,
+          duration: CONFIG.buttonDuration,
+          ease: 'expo.out'
+        });
+        if (iconBase) {
+          window.gsap.to(iconBase, {
+            x: '0%',
+            rotation: 0,
+            duration: CONFIG.iconDuration,
+            ease: 'expo.out'
+          });
+        }
+      });
+      return () => {
+        timeline.kill();
+      };
+    }
+    buttonWraps.forEach((buttonWrap) => {
+      if (buttonWrap.dataset.scriptInitialized) return;
+      buttonWrap.dataset.scriptInitialized = 'true';
+      const buttonBase = buttonWrap.querySelector('[data-button-base]');
+      const iconBase = buttonWrap.querySelector('[data-button-icon-base]');
+      const buttonText = buttonWrap.querySelector('[data-button-text]');
+      if (!buttonBase || !buttonText) return;
+      const originalColor = window.getComputedStyle(buttonText).color;
+      const split = new window.SplitText(buttonText, {
+        type: 'chars',
+        charsClass: 'char'
+      });
+      window.gsap.set(split.chars, {
+        clearProps: 'opacity,backgroundImage,backgroundClip,webkitTextFillColor'
+      });
+      if (prefersReducedMotion) {
+        setupReducedMotion(buttonWrap, buttonBase, iconBase, split, originalColor);
+        return;
+      }
+      const timeline = window.gsap.timeline({ paused: true })
+        .to(split.chars, {
+          color: CONFIG.inColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig
+        })
+        .to(split.chars, {
+          color: CONFIG.outColor,
+          duration: CONFIG.duration,
+          ease: 'none',
+          stagger: staggerConfig
+        }, `>+${CONFIG.phaseGap}`);
+      const cleanup = setupFullAnimation(buttonWrap, buttonBase, iconBase, split,
+        originalColor, timeline);
+      if (window.MutationObserver) {
+        const observer = new MutationObserver(() => {
+          if (!document.body.contains(buttonWrap)) {
+            cleanup();
+            observer.disconnect();
+          }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      }
+    });
+    return () => {
+      buttonWraps.forEach(buttonWrap => {
+        if (buttonWrap.dataset.scriptInitialized) {
+          delete buttonWrap.dataset.scriptInitialized;
+        }
+      });
+    };
+  });
+})();
+
+  });
+});
+</script></div><div class="clickable_wrap u-cover-absolute"><a target="" href="community.html" class="clickable_link w-inline-block"><span class="clickable_text u-sr-only">Join the community</span></a><button type="button" class="clickable_btn"><span class="clickable_text u-sr-only">Join the community</span></button></div><div class="button_main_element"><div class="button_main_text_wrap"><div data-button-text="" aria-hidden="true" class="button_main_text u-text-style-h5 u-text-trim-off">About Us</div></div><div data-gradient-bg="" class="button_main_icon"><div class="button_main_icon_inner"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 16" fill="none" class="u-svg"><g clip-path="url(#clip0_4052_922)"><path d="M13.8563 9.24998C14.8165 8.75272 14.8165 7.37926 13.8563 6.882L3.84821 1.69925C2.66122 1.08457 1.40881 2.40439 2.08481 3.55755L4.72771 8.06598L2.08483 12.5744C1.40883 13.7276 2.66126 15.0474 3.84821 14.4327L13.8563 9.24998Z" fill="currentColor"></path></g><defs><clippath id="clip0_4052_922"><rect width="16" height="16" fill="currentColor"></rect></clippath></defs></svg></div><div data-button-icon-base="" class="button_main_icon_base u-cover-absolute"></div></div><div data-button-base="" data-shadow="" class="button_main_base u-cover-absolute"></div></div></div></div></div></div><div data-wf--spacer--section-space="large" class="u-section-spacer w-variant-8cc18b30-4618-8767-0111-f6abfe45aaa3 u-ignore-trim"></div></section></main><footer class="footer_wrap u-theme-dark"><h2 class="footer_title u-sr-only">Footer</h2><div class="footer_contain u-container-full u-min-height-screen"><div class="footer_layout u-grid-above"><nav aria-label="Directory" class="footer_nav"><section data-trigger="group" class="footer_group_wrap"><div role="list" class="footer_group_list"><div data-trigger="hover-other focus-other" role="listitem" class="footer_group_item"><a data-in-color="var(--swatch--green)" data-stagger-cta="" href="our-games.html" class="footer_link_wrap w-inline-block"><div class="footer_link_text u-text-style-h2">Our Games</div></a><link rel="prefetch" href="our-games.html"/></div><div data-trigger="hover-other focus-other" role="listitem" class="footer_group_item"><a data-in-color="var(--swatch--gold)" data-stagger-cta="" href="development.html" class="footer_link_wrap w-inline-block"><div class="footer_link_text u-text-style-h2">Our Process</div></a><link rel="prefetch" href="development.html"/></div><div data-trigger="hover-other focus-other" role="listitem" class="footer_group_item"><a data-in-color="var(--swatch--fuchsia)" data-stagger-cta="" href="community.html" class="footer_link_wrap w-inline-block"><div class="footer_link_text u-text-style-h2">About</div></a><link rel="prefetch" href="community.html"/></div></div></section></nav><div class="footer_content">
+
+<div class="footer_social_wrap"><div role="list" class="footer_social_list"><div role="listitem" class="footer_social_item"><a aria-label="Instagram" href="https://www.instagram.com/dashstudios.tech/" target="_blank" class="footer_social_link w-inline-block"><div class="footer_social_link_icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="u-svg"><path d="M21.94 7.88C21.9206 7.0503 21.7652 6.2294 21.48 5.45C21.2283 4.78181 20.8322 4.17742 20.32 3.68C19.8226 3.16776 19.2182 2.77166 18.55 2.52C17.7706 2.23484 16.9497 2.07945 16.12 2.06C15.06 2 14.72 2 12 2C9.28 2 8.94 2 7.88 2.06C7.0503 2.07945 6.2294 2.23484 5.45 2.52C4.78181 2.77166 4.17742 3.16776 3.68 3.68C3.16743 4.17518 2.77418 4.78044 2.53 5.45C2.23616 6.22734 2.07721 7.04915 2.06 7.88C2 8.94 2 9.28 2 12C2 14.72 2 15.06 2.06 16.12C2.07721 16.9508 2.23616 17.7727 2.53 18.55C2.77418 19.2196 3.16743 19.8248 3.68 20.32C4.17742 20.8322 4.78181 21.2283 5.45 21.48C6.2294 21.7652 7.0503 21.9206 7.88 21.94C8.94 22 9.28 22 12 22C14.72 22 15.06 22 16.12 21.94C16.9497 21.9206 17.7706 21.7652 18.55 21.48C19.2134 21.219 19.816 20.8242 20.3201 20.3201C20.8242 19.816 21.219 19.2134 21.48 18.55C21.7652 17.7706 21.9206 16.9497 21.94 16.12C21.94 15.06 22 14.72 22 12C22 9.28 22 8.94 21.94 7.88ZM20.14 16C20.1327 16.6348 20.0178 17.2637 19.8 17.86C19.6327 18.2913 19.3773 18.683 19.0501 19.0101C18.723 19.3373 18.3313 19.5927 17.9 19.76C17.3037 19.9778 16.6748 20.0927 16.04 20.1C15.04 20.15 14.67 20.16 12.04 20.16C9.41 20.16 9.04 20.16 8.04 20.1C7.38073 20.1148 6.72401 20.0132 6.1 19.8C5.66869 19.6327 5.27698 19.3773 4.94985 19.0501C4.62272 18.723 4.36734 18.3313 4.2 17.9C3.97775 17.2911 3.86271 16.6482 3.86 16C3.86 15 3.8 14.63 3.8 12C3.8 9.37 3.8 9 3.86 8C3.86271 7.35178 3.97775 6.70893 4.2 6.1C4.36734 5.66869 4.62272 5.27698 4.94985 4.94985C5.27698 4.62272 5.66869 4.36734 6.1 4.2C6.70893 3.97775 7.35178 3.86271 8 3.86C9 3.86 9.37 3.8 12 3.8C14.63 3.8 15 3.8 16 3.86C16.6348 3.86728 17.2637 3.98225 17.86 4.2C18.2913 4.36734 18.683 4.62272 19.0101 4.94985C19.3373 5.27698 19.5927 5.66869 19.76 6.1C19.9959 6.7065 20.1245 7.34942 20.14 8C20.19 9 20.2 9.37 20.2 12C20.2 14.63 20.19 15 20.14 16Z" fill="currentColor"></path><path d="M12.0001 6.86035C10.9835 6.86035 9.98975 7.16181 9.14448 7.7266C8.29921 8.29139 7.6404 9.09415 7.25137 10.0334C6.86233 10.9726 6.76055 12.0061 6.95887 13.0032C7.1572 14.0002 7.64674 14.9161 8.36558 15.6349C9.08442 16.3538 10.0003 16.8433 10.9973 17.0416C11.9944 17.24 13.0279 17.1382 13.9671 16.7491C14.9063 16.3601 15.7091 15.7013 16.2739 14.856C16.8386 14.0108 17.1401 13.017 17.1401 12.0004C17.1401 10.6372 16.5986 9.32976 15.6346 8.36582C14.6707 7.40188 13.3633 6.86035 12.0001 6.86035ZM12.0001 15.3304C11.3415 15.3304 10.6977 15.1351 10.1501 14.7692C9.60245 14.4033 9.17563 13.8832 8.92359 13.2747C8.67155 12.6663 8.60561 11.9967 8.7341 11.3507C8.86258 10.7048 9.17974 10.1114 9.64544 9.64568C10.1111 9.17998 10.7045 8.86282 11.3504 8.73434C11.9964 8.60585 12.666 8.67179 13.2744 8.92383C13.8829 9.17587 14.403 9.60269 14.7689 10.1504C15.1348 10.698 15.3301 11.3418 15.3301 12.0004C15.3301 12.4377 15.244 12.8707 15.0766 13.2747C14.9093 13.6788 14.664 14.0458 14.3548 14.3551C14.0455 14.6643 13.6785 14.9096 13.2744 15.0769C12.8704 15.2443 12.4374 15.3304 12.0001 15.3304Z" fill="currentColor"></path><path d="M17.3401 5.45996C17.1028 5.45996 16.8708 5.53034 16.6734 5.66219C16.4761 5.79405 16.3223 5.98147 16.2314 6.20074C16.1406 6.42001 16.1169 6.66129 16.1632 6.89406C16.2095 7.12684 16.3237 7.34066 16.4916 7.50848C16.6594 7.67631 16.8732 7.7906 17.106 7.8369C17.3388 7.8832 17.58 7.85944 17.7993 7.76861C18.0186 7.67779 18.206 7.52398 18.3379 7.32664C18.4697 7.1293 18.5401 6.89729 18.5401 6.65996C18.5401 6.3417 18.4137 6.03647 18.1886 5.81143C17.9636 5.58638 17.6584 5.45996 17.3401 5.45996Z" fill="currentColor"></path></svg></div></a></div><div role="listitem" class="footer_social_item"><a aria-label="Linked In" href="https://www.linkedin.com/company/dash-studios-inc" target="_blank" class="footer_social_link w-inline-block"><div class="footer_social_link_icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="u-svg"><path d="M20.9 20.9004H17.166V15.0534C17.166 13.6594 17.138 11.8654 15.222 11.8654C13.277 11.8654 12.98 13.3824 12.98 14.9504V20.9004H9.24897V8.87743H12.833V10.5164H12.881C13.2402 9.90322 13.7588 9.39882 14.3818 9.05687C15.0048 8.71491 15.7088 8.54819 16.419 8.57443C20.199 8.57443 20.898 11.0624 20.898 14.3004V20.9004H20.9ZM5.03597 7.23243C4.60729 7.23303 4.18807 7.10647 3.83134 6.86876C3.4746 6.63105 3.19638 6.29288 3.03188 5.89702C2.86737 5.50116 2.82397 5.06541 2.90717 4.64488C2.99036 4.22436 3.19641 3.83795 3.49925 3.53455C3.80209 3.23115 4.18812 3.02439 4.60849 2.94042C5.02886 2.85645 5.4647 2.89904 5.86086 3.06281C6.25702 3.22659 6.5957 3.50418 6.83407 3.86047C7.07243 4.21677 7.19977 4.63576 7.19997 5.06443C7.20036 5.34891 7.14469 5.63068 7.03612 5.89363C6.92756 6.15659 6.76824 6.39556 6.56727 6.59691C6.3663 6.79825 6.12761 6.95801 5.86486 7.06706C5.60211 7.17611 5.32045 7.2323 5.03597 7.23243ZM6.90597 20.9004H3.16497V8.87743H6.90597V20.9004Z" fill="currentColor"></path></svg></div></a></div><div role="listitem" class="footer_social_item"><a aria-label="YouTube" href="https://www.youtube.com/channel/UCZuLS7Q8jemturg7B3FpxPg" target="_blank" class="footer_social_link w-inline-block"><div class="footer_social_link_icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="u-svg"><path d="M22.062 6.92715C21.9402 6.49107 21.708 6.09379 21.3878 5.77373C21.0675 5.45367 20.6701 5.22166 20.234 5.10015C18.597 4.66115 12.01 4.66115 12.01 4.66115C12.01 4.66115 5.43896 4.65215 3.78496 5.10015C3.34881 5.22166 2.9514 5.45367 2.63116 5.77373C2.31093 6.09379 2.0787 6.49107 1.95696 6.92715C1.64643 8.60319 1.49343 10.3046 1.49996 12.0092C1.49414 13.707 1.6468 15.4017 1.95596 17.0712C2.07749 17.5078 2.30973 17.9055 2.63017 18.226C2.95061 18.5464 3.34839 18.7787 3.78496 18.9002C5.41996 19.3402 12.01 19.3402 12.01 19.3402C12.01 19.3402 18.58 19.3402 20.234 18.9002C20.6701 18.7787 21.0675 18.5467 21.3878 18.2266C21.708 17.9066 21.9402 17.5093 22.062 17.0732C22.3647 15.4031 22.5113 13.7085 22.5 12.0112C22.5124 10.3066 22.3658 8.60451 22.062 6.92715ZM9.90696 15.1522V8.85215L15.39 12.0052L9.90696 15.1522Z" fill="currentColor"></path></svg></div></a></div></div></div></div></div><div class="footer_bottom_wrap"><div class="footer_bottom_content"><ul role="list" class="footer_bottom_link_list"><li class="footer_bottom_link_item"><a href="terms.html" class="footer_bottom_link u-text-style-h5 u-color-faded">Terms</a></li><li class="footer_bottom_link_item"><a href="privacy.html" class="footer_bottom_link u-text-style-h5 u-color-faded">Privacy</a></li></ul><div class="footer_bottom_text u-text-style-h5 u-color-faded"><span>© </span><span data-dynamic-year=" ">{{year}}</span><span> Dash Studios, Inc.</span></div></div></div></div><div class="u-embed-js w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-dynamic-year]").forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
+});
+</script></div><div class="u-embed-js w-embed w-script"><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".footer_wrap").forEach((component) => {
+      if (component.dataset.scriptInitialized) return;
+      component.dataset.scriptInitialized = "true";
+      ScrollTrigger.create({
+        trigger: ".footer_wrap",
+        start: "top 4%",
+        end: "bottom top",
+        onEnter: () => {
+          document.querySelector(".nav_component").classList.add("u-theme-dark");
+        },
+        onLeaveBack: () => {
+          document.querySelector(".nav_component").classList.remove("u-theme-dark");
+        }
+      });
+    });
+  });
+</script></div><div class="u-embed-css w-embed"><style>
+#canvas-target canvas {
+  position: relative;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  max-width: unset;
+  pointer-events: all;
+  max-width: calc(100% + 2px);
+  max-height: calc(100% + 2px);
+  min-width: calc(100% + 2px);
+  min-height: calc(100% + 2px);
+}
+</style></div><div class="u-embed-js w-embed w-script"><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".canvas-matter").forEach((component) => {
+      if (component.dataset.scriptInitialized) return;
+      component.dataset.scriptInitialized = "true";
+      function initFalling2DMatterJS() {
+        const canvas = document.querySelector("#canvas-target");
+        // Check if canvas is on page
+        if (!canvas) {
+          return;
+        }
+        const canvasWidth = canvas.clientWidth + 2;
+        const canvasHeight = canvas.clientHeight + 2;
+        const canvasWallDepth = canvasWidth / 4;
+        const smileyAmount = 15;
+        const smileySize = canvasWidth / 10;
+        const smileySizeTexture = 256;
+        const smileySizeScale = smileySize / smileySizeTexture;
+        const smileyRestitution = 0.75;
+        const worldGravity = 2;
+
+        let { Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint } = Matter;
+
+        let engine = Engine.create();
+        engine.world.gravity.y = worldGravity;
+
+        let render = Render.create({
+          element: canvas,
+          engine: engine,
+          options: {
+            background: "transparent",
+            wireframes: false,
+            width: canvasWidth,
+            height: canvasHeight,
+            pixelRatio: 2,
+            border: "none",
+          }
+        });
+
+        function getRandomNumber(min, max) {
+          return Math.random() * (max - min) + min;
+        }
+
+        let min = smileySize / 2;
+        let max = canvasWidth - (smileySize / 2);
+
+        let textureArray = [
+          'https://cdn.prod.website-files.com/68e6392a59d31f870cef56f9/68ee629d90ef42b566f21fe4_3dfe2cfe95d65e77cd5980ed74e3b8e6_gem_coral.svg',
+          'https://cdn.prod.website-files.com/68e6392a59d31f870cef56f9/68ee629dfcd5a3307952b724_73a973d4a637c76b44052c22a9c6e850_gem_green.svg',
+          'https://cdn.prod.website-files.com/68e6392a59d31f870cef56f9/68ee629df25ccf964abb6c72_306e69299aba1abee2477d85680e1540_gem_teal.svg',
+          'https://cdn.prod.website-files.com/68e6392a59d31f870cef56f9/68ee629dcc5db90bd76f1fd3_f94186c66d0a684bc502fd4d0a84a15a_gem_fuchsia.svg',
+          'https://cdn.prod.website-files.com/68e6392a59d31f870cef56f9/68ee629d7ac57097b26dbb0a_0c83db0bb88a0bd4ff037ee2aaed071e_gem_gold.svg'
+        ];
+
+        let textureIndex = 0;
+
+        function getNextTexture() {
+          const texture = textureArray[textureIndex];
+          textureIndex = (textureIndex + 1) % textureArray.length;
+          return texture;
+        }
+
+        function getRandomTexture() {
+          const randomIndex = Math.floor(Math.random() * textureArray.length);
+          return textureArray[randomIndex];
+        }
+
+        const smileyCreate = () => {
+          let smiley = Bodies.rectangle(getRandomNumber(min, max), smileySize, smileySize,
+                                        smileySize, {
+            chamfer: {
+              radius: smileySize / 2
+            },
+            restitution: smileyRestitution,
+            render: {
+              sprite: {
+                texture: getNextTexture(),
+                xScale: smileySizeScale,
+                yScale: smileySizeScale
+              }
+            }
+          });
+          Composite.add(engine.world, smiley);
+        };
+
+        let boxTop = Bodies.rectangle(canvasWidth / 2 + (canvasWallDepth * 2), canvasHeight +
+                                      canvasWallDepth, canvasWidth + (canvasWallDepth * 4), (canvasWallDepth * 2), {
+          isStatic: true
+        });
+        let boxLeft = Bodies.rectangle((canvasWallDepth * -1), canvasHeight / 2, (canvasWallDepth * 2),
+                                       canvasHeight, {
+          isStatic: true
+        });
+        let boxRight = Bodies.rectangle(canvasWidth + canvasWallDepth, canvasHeight / 2, (
+          canvasWallDepth * 2), canvasHeight, {
+          isStatic: true
+        });
+        let boxBottom = Bodies.rectangle(canvasWidth / 2 + (canvasWallDepth * 2), (canvasWallDepth * -1),
+                                         canvasWidth + (canvasWallDepth * 4), (canvasWallDepth * 2), {
+          isStatic: true
+        });
+
+        Composite.add(engine.world, [boxTop, boxLeft, boxRight, boxBottom]);
+
+        Render.run(render);
+
+        let runner = Runner.create();
+        Matter.Runner.run(runner, engine);
+
+        function repeatedFunction(count, maxCount) {
+          if (count < maxCount) {
+            smileyCreate();
+            setTimeout(() => {
+              repeatedFunction(count + 1, maxCount);
+            }, 100);
+          }
+        }
+        repeatedFunction(0, smileyAmount);
+
+        let mouse = Mouse.create(render.canvas);
+        let mouseConstraint = MouseConstraint.create(engine, {
+          mouse: mouse,
+          constraint: {
+            stiffness: 0.2,
+            render: {
+              visible: false
+            }
+          }
+        });
+        Composite.add(engine.world, mouseConstraint);
+
+        mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
+        mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse
+                                                          .mousewheel);
+
+        mouseConstraint.mouse.element.removeEventListener('touchstart', mouseConstraint.mouse.mousedown);
+        mouseConstraint.mouse.element.removeEventListener('touchmove', mouseConstraint.mouse.mousemove);
+        mouseConstraint.mouse.element.removeEventListener('touchend', mouseConstraint.mouse.mouseup);
+        mouseConstraint.mouse.element.addEventListener('touchstart', mouseConstraint.mouse
+                                                       .mousedown, { passive: true });
+        mouseConstraint.mouse.element.addEventListener('touchmove', (e) => {
+          if (mouseConstraint.body) {
+            mouseConstraint.mouse.mousemove(e);
+          }
+        });
+        mouseConstraint.mouse.element.addEventListener('touchend', (e) => {
+          if (mouseConstraint.body) {
+            mouseConstraint.mouse.mouseup(e);
+          }
+        });
+      }
+
+      // Initialize only when scrolled into view AND if user doesn't prefer reduced motion
+      const canvas = document.querySelector("#canvas-target");
+      if (canvas) {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Only proceed if user doesn't prefer reduced motion
+        if (!prefersReducedMotion) {
+          let hasInitialized = false;
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting && !hasInitialized) {
+                hasInitialized = true;
+                initFalling2DMatterJS();
+                observer.disconnect();
+              }
+            });
+          }, {
+            threshold: 0.1
+          });
+
+          observer.observe(canvas);
+        }
+      }
+
+    });
+  });
+</script></div><div class="u-embed-js w-embed w-script"><script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".footer_bottom_wrap").forEach((component) => {
+      if (component.dataset.scriptInitialized) return;
+      component.dataset.scriptInitialized = "true";
+      const trigger = document.querySelector('[data-credit-trigger]');
+      const modal = document.querySelector('[data-credit-modal]');
+      let isModalOpen = false;
+
+      gsap.set(modal, { visibility: 'hidden', autoAlpha: 0, scale: 0.8 });
+
+      function openModal() {
+        isModalOpen = true;
+        trigger.setAttribute('aria-expanded', 'true');
+        modal.setAttribute('aria-hidden', 'false');
+
+        gsap.set(modal, { visibility: 'visible' });
+        gsap.to(modal, {
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.5,
+          ease: 'expo.out'
+        });
+
+        const firstFocusable = modal.querySelector(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        if (firstFocusable) {
+          firstFocusable.focus();
+        } else {
+          modal.focus();
+        }
+      }
+
+      function closeModal() {
+        isModalOpen = false;
+        trigger.setAttribute('aria-expanded', 'false');
+        modal.setAttribute('aria-hidden', 'true');
+
+        gsap.to(modal, {
+          autoAlpha: 0,
+          scale: 0.8,
+          duration: 0.2,
+          onComplete: () => {
+            gsap.set(modal, { visibility: 'hidden' });
+          }
+        });
+
+        trigger.focus();
+      }
+
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      });
+
+      // Close on click outside - listen on document
+      document.addEventListener('click', (e) => {
+        if (isModalOpen &&
+            !modal.contains(e.target) &&
+            !trigger.contains(e.target)) {
+          closeModal();
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isModalOpen) {
+          closeModal();
+        }
+      });
+
+    });
+  });
+</script></div></footer></div><script src="../d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c87bae.js?site=68e6392a59d31f870cef56f9" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="./cdn.prod.website-files.com/68e6392a59d31f870cef56f9/js/webflow.a0aa6ca1.9f5759ad0e46cca4.js" type="text/javascript"></script><script src="./cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js" type="text/javascript"></script><script src="./cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js" type="text/javascript"></script><script src="./cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js" type="text/javascript"></script><script src="./cdn.prod.website-files.com/gsap/3.14.2/InertiaPlugin.min.js" type="text/javascript"></script><script src="./cdn.prod.website-files.com/gsap/3.14.2/Physics2DPlugin.min.js" type="text/javascript"></script><script src="./cdn.prod.website-files.com/gsap/3.14.2/Observer.min.js" type="text/javascript"></script><script src="./cdn.prod.website-files.com/gsap/3.14.2/Draggable.min.js" type="text/javascript"></script><script src="./cdn.prod.website-files.com/gsap/3.14.2/MotionPathPlugin.min.js" type="text/javascript"></script><script type="text/javascript">gsap.registerPlugin(ScrollTrigger,SplitText,InertiaPlugin,Physics2DPlugin,Observer,Draggable,MotionPathPlugin);</script><script src="./cdn.jsdelivr.net/npm/lottie-web%405.12.2/build/player/lottie.min.js"></script>
+<script src="./cdn.jsdelivr.net/gh/lumosframework/scripts%40v1.1.1/theme-collector.js"></script>
+<script src="./cdn.jsdelivr.net/npm/lenis%401.2.3/dist/lenis.min.js"></script>
+<script src="./cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+
+<!-- Lenis --> 
+<script>
+// Lenis (with GSAP Scroltrigger)
+const lenis = new Lenis();
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add((time) => {lenis.raf(time * 1000);});
+gsap.ticker.lagSmoothing(0);
+</script> 
+
+<!-- Animate Page Theme on Scroll -->
+<script>
+document.addEventListener("colorThemesReady", () => {
+  $("[data-animate-theme-to]").each(function () {
+    let theme = $(this).attr("data-animate-theme-to");
+    let brand = $(this).attr("data-animate-brand-to");
+
+    ScrollTrigger.create({
+      trigger: $(this),
+      start: "top center",
+      end: "bottom center",
+      onToggle: ({ self, isActive }) => {
+        if (isActive) gsap.to("body", { ...colorThemes.getTheme(theme, brand) });
+      }
+    });
+  });
+});
+</script>
+
+<!-- Global Parallax -->
+<script>
+gsap.registerPlugin(ScrollTrigger)
+
+function initGlobalParallax() {
+  const mm = gsap.matchMedia()
+
+  mm.add(
+    {
+      isMobile: "(max-width:479px)",
+      isMobileLandscape: "(max-width:767px)",
+      isTablet: "(max-width:991px)",
+      isDesktop: "(min-width:992px)"
+    },
+    (context) => {
+      const { isMobile, isMobileLandscape, isTablet } = context.conditions
+
+      const ctx = gsap.context(() => {
+        document.querySelectorAll('[data-parallax="trigger"]').forEach((trigger) => {
+            // Check if this trigger has to be disabled on smaller breakpoints
+            const disable = trigger.getAttribute("data-parallax-disable")
+            if (
+              (disable === "mobile" && isMobile) ||
+              (disable === "mobileLandscape" && isMobileLandscape) ||
+              (disable === "tablet" && isTablet)
+            ) {
+              return
+            }
+            
+            // Optional: you can target an element inside a trigger if necessary 
+            const target = trigger.querySelector('[data-parallax="target"]') || trigger
+
+            // Get the direction value to decide between xPercent or yPercent tween
+            const direction = trigger.getAttribute("data-parallax-direction") || "vertical"
+            const prop = direction === "horizontal" ? "xPercent" : "yPercent"
+            
+            // Get the scrub value, our default is 'true' because that feels nice with Lenis
+            const scrubAttr = trigger.getAttribute("data-parallax-scrub")
+            const scrub = scrubAttr ? parseFloat(scrubAttr) : true
+            
+            // Get the start position in % 
+            const startAttr = trigger.getAttribute("data-parallax-start")
+            const startVal = startAttr !== null ? parseFloat(startAttr) : 20
+            
+            // Get the end position in %
+            const endAttr = trigger.getAttribute("data-parallax-end")
+            const endVal = endAttr !== null ? parseFloat(endAttr) : -20
+            
+            // Get the start value of the ScrollTrigger
+            const scrollStartRaw = trigger.getAttribute("data-parallax-scroll-start") || "top bottom"
+            const scrollStart = `clamp(${scrollStartRaw})`
+            
+           // Get the end value of the ScrollTrigger  
+            const scrollEndRaw = trigger.getAttribute("data-parallax-scroll-end") || "bottom top"
+            const scrollEnd = `clamp(${scrollEndRaw})`
+
+            gsap.fromTo(
+              target,
+              { [prop]: startVal },
+              {
+                [prop]: endVal,
+                ease: "none",
+                scrollTrigger: {
+                  trigger,
+                  start: scrollStart,
+                  end: scrollEnd,
+                  scrub,
+                },
+              }
+            )
+          })
+      })
+
+      return () => ctx.revert()
+    }
+  )
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initGlobalParallax()
+})
+</script>
+
+<!-- Gradient Headings -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+    if (!window.gsap || !window.ScrollTrigger) return;
+    const SELECTOR = '.u-heading-accent strong, .u-heading-accent b';
+    const STAGGER = 0.02;
+    const DUR = 0.6;
+    const LAG = 0.01;
+    const EASE = 'expo.out';
+    const GRADIENT_EASE = 'expo.out';
+    document.querySelectorAll(SELECTOR).forEach((el) => {
+      const text = el.textContent;
+      // Create wrapper
+      const wrap = document.createElement('span');
+      wrap.style.cssText = 'position:relative;display:inline-block;white-space:nowrap;';
+      // Create gradient layer (bottom) - keeps original element's classes
+      const gradientLayer = document.createElement(el.tagName.toLowerCase());
+      gradientLayer.className = el.className;
+      gradientLayer.style.cssText = 'display:inline-block;white-space:nowrap;';
+      // Create overlay layer (top) - positioned absolutely with explicit color
+      const overlayLayer = document.createElement('span');
+      overlayLayer.style.cssText = `
+        position:absolute;
+        top:0;
+        left:0;
+        color:var(--_theme---text);
+        display:inline-block;
+        white-space:nowrap;
+      `;
+      // Split text into character spans for gradient layer - START INVISIBLE
+      const gradientSpans = [];
+      for (const ch of text) {
+        const span = document.createElement('span');
+        span.textContent = ch;
+        span.style.opacity = '0'; // Start invisible
+        gradientLayer.appendChild(span);
+        gradientSpans.push(span);
+      }
+      // Split text into character spans for overlay layer - START VISIBLE
+      const overlaySpans = [];
+      for (const ch of text) {
+        const span = document.createElement('span');
+        span.textContent = ch;
+        span.style.opacity = '1'; // Start visible
+        overlayLayer.appendChild(span);
+        overlaySpans.push(span);
+      }
+      wrap.appendChild(gradientLayer);
+      wrap.appendChild(overlayLayer);
+      el.replaceWith(wrap);
+      // Animate on scroll
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: wrap,
+          start: 'top bottom',
+          end: 'top 70%',
+          toggleActions: 'none play none reset'
+        }
+      });
+      // Overlay fades out
+      tl.to(overlaySpans, {
+        opacity: 0,
+        duration: DUR,
+        ease: EASE,
+        stagger: { each: STAGGER, from: 'start' }
+      }, 0);
+      // Gradient fades in (with delay)
+      tl.to(gradientSpans, {
+        opacity: 1,
+        duration: DUR,
+        ease: GRADIENT_EASE,
+        stagger: { each: STAGGER, from: 'start' }
+      }, LAG);
+    });
+  })();
+});
+</script>
+
+<!-- Accent Stagger Headings -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll("[data-heading-reveal=true]").forEach((text) => {
+    // If user prefers reduced motion, just make text visible and skip animation
+    if (prefersReducedMotion) {
+      gsap.set(text, { visibility: "visible" });
+      return;
+    }
+    // Otherwise, run the animation
+    const split = SplitText.create(text.children, {
+      type: "words, chars",
+      wordsClass: "word",
+      charsClass: "char",
+    });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: text,
+        start: "top bottom",
+        end: "top 70%",
+        toggleActions: "none play none reset",
+      },
+    });
+    tl.to(split.chars, {
+        color: "var(--_theme---heading-accent)",
+        duration: 0.3,
+        stagger: { amount: 0.5 },
+      })
+      .to(split.chars, {
+        color: "var(--_theme---text)",
+        duration: 0.3,
+        stagger: { amount: 0.5 },
+      }, 0.3);
+    gsap.set(text, { visibility: "visible" });
+  });
+});
+</script>
+
+<!-- Hover Intertia -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function initMomentumBasedHover() {
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) { return; }
+    const xyMultiplier = 30;
+    const rotationMultiplier = 20;
+    const inertiaResistance = 100;
+    const clampXY = gsap.utils.clamp(-1080, 1080);
+    const clampRot = gsap.utils.clamp(-60, 60);
+    document.querySelectorAll('[data-momentum-hover-init]').forEach(root => {
+      let prevX = 0,
+        prevY = 0;
+      let velX = 0,
+        velY = 0;
+      let rafId = null;
+      root.addEventListener('mousemove', e => {
+        if (rafId) return;
+        rafId = requestAnimationFrame(() => {
+          velX = e.clientX - prevX;
+          velY = e.clientY - prevY;
+          prevX = e.clientX;
+          prevY = e.clientY;
+          rafId = null;
+        });
+      });
+      root.querySelectorAll('[data-momentum-hover-element]').forEach(el => {
+        el.addEventListener('mouseenter', e => {
+          const target = el.querySelector('[data-momentum-hover-target]');
+          if (!target) return;
+          const { left, top, width, height } = target.getBoundingClientRect();
+          const centerX = left + width / 2;
+          const centerY = top + height / 2;
+          const offsetX = e.clientX - centerX;
+          const offsetY = e.clientY - centerY;
+          const rawTorque = offsetX * velY - offsetY * velX;
+          const leverDist = Math.hypot(offsetX, offsetY) || 1;
+          const angularForce = rawTorque / leverDist;
+          const velocityX = clampXY(velX * xyMultiplier);
+          const velocityY = clampXY(velY * xyMultiplier);
+          const rotationVelocity = clampRot(angularForce * rotationMultiplier);
+          gsap.to(target, {
+            inertia: {
+              x: { velocity: velocityX, end: 0 },
+              y: { velocity: velocityY, end: 0 },
+              rotation: { velocity: rotationVelocity, end: 0 },
+              resistance: inertiaResistance
+            }
+          });
+        });
+      });
+    });
+  }
+  initMomentumBasedHover();
+});
+</script>
+
+<!-- Lottie Files -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function initLottieAnimations() {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.querySelectorAll("[data-lottie]").forEach(target => {
+      let anim;
+      ScrollTrigger.create({
+        trigger: target,
+        start: "top 80%",
+        end: "bottom top-=25%",
+        onEnter: handleEnter,
+        onEnterBack: handleEnter,
+        onLeave: handleLeave,
+        onLeaveBack: handleLeave,
+      });
+      function handleEnter() {
+        if (!target.hasAttribute("data-lottie-fired")) {
+          target.setAttribute("data-lottie-fired", "true");
+          const shouldLoop = target.getAttribute("data-lottie-loop") !== "false";
+          anim = lottie.loadAnimation({
+            container: target,
+            renderer: "svg",
+            loop: shouldLoop,
+            autoplay: !reduceMotion,
+            path: target.getAttribute("data-lottie-src"),
+          });
+          anim.addEventListener("DOMLoaded", () => {
+            if (reduceMotion) {
+              const frame = parseInt(target.getAttribute("data-lottie-frame") || "0", 10);
+              anim.goToAndStop(frame, true);
+            }
+          });
+        } else if (anim && !reduceMotion) {
+          anim.play();
+        }
+      }
+      function handleLeave() {
+        if (anim && !reduceMotion) {
+          anim.pause();
+        }
+      }
+    });
+  }
+  initLottieAnimations();
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+	if (typeof window.gsap === "undefined") document.documentElement.classList.add("gsap-not-found");
+	gsap.registerPlugin(ScrollTrigger, SplitText);
+});
+</script></body>
+<!-- Mirrored from www.dashstudios.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Dec 2025 08:29:08 GMT -->
 </html>
