@@ -20,3 +20,127 @@
   width: 100%;
   justify-content: space-between;
 }
+
+/* Nouns Hunt page */
+.nh_hero {
+  padding: 9rem 0 5rem;
+}
+
+.nh_hero_layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
+  gap: 4rem;
+  align-items: center;
+}
+
+.nh_hero_copy,
+.nh_support {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.nh_hero_copy > *,
+.nh_section h2,
+.nh_section p {
+  margin: 0;
+}
+
+.nh_icon {
+  width: 6rem;
+  height: 6rem;
+}
+
+.nh_lead {
+  max-width: 38rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.nh_store {
+  width: min(100%, 22rem);
+}
+
+.nh_shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+}
+
+.nh_section {
+  padding: 5rem 0;
+}
+
+.nh_section h2 + * {
+  margin-top: 1.5rem;
+}
+
+.nh_features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nh_feature {
+  padding: 1.5rem;
+  border: 1px solid var(--_theme---border);
+  border-radius: 1rem;
+}
+
+.nh_feature h3 {
+  margin: 0 0 0.5rem;
+}
+
+.nh_gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 20rem));
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.nh_support a:not(.clickable_link) {
+  text-decoration: underline;
+}
+
+.nh_section .nh_support > * {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .nh_hero {
+    padding: 7rem 0 3rem;
+  }
+
+  .nh_hero_layout,
+  .nh_features,
+  .nh_gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .nh_hero_visual,
+  .nh_gallery {
+    justify-self: center;
+    width: min(100%, 20rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nh_section {
+    padding: 3.5rem 0;
+  }
+
+  .nh_store {
+    width: 100%;
+  }
+}
+
+/* The header logo is black: invert it while the header sits over the dark footer. */
+.nav_component.u-theme-dark img[src$="logoblack.png"] {
+  filter: invert(1);
+}
