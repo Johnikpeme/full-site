@@ -160,3 +160,17 @@
 .contact_mail p a {
   text-decoration: underline;
 }
+
+/* Footer: room for the support address, and side padding where the bottom row sits outside the container. */
+.footer_bottom_link_list {
+  flex-wrap: wrap;
+}
+
+.footer_wrap > .footer_bottom_wrap {
+  padding-left: var(--site--margin);
+  padding-right: var(--site--margin);
+}
+
+.nh_more {
+  align-self: flex-start;
+}
